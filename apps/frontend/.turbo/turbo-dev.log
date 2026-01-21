@@ -13,3 +13,35 @@
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
  [32m[1m✓[22m[39m Compiled / in 6.6s
  GET / [32m200[39m in 7124ms
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/workspaces/Travel-With-Sulemana/apps/frontend/.next/server/app/page/app-build-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/workspaces/Travel-With-Sulemana/apps/frontend/.next/server/app/page/app-build-manifest.json'[39m
+}
+ [37m[1m○[22m[39m Compiling /_error ...
+ [32m[1m✓[22m[39m Compiled /_error in 1762ms
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/workspaces/Travel-With-Sulemana/apps/frontend/.next/static/development/_buildManifest.js.tmp.eyls6njlasl'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/workspaces/Travel-With-Sulemana/apps/frontend/.next/static/development/_buildManifest.js.tmp.eyls6njlasl'[39m
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/Travel-With-Sulemana/apps/frontend/.next/server/app/page/app-build-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/workspaces/Travel-With-Sulemana/apps/frontend/.next/server/app/page/app-build-manifest.json'[39m
+}
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/workspaces/Travel-With-Sulemana/apps/frontend/.next/static/development/_buildManifest.js.tmp.p3am51k7qqs'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/workspaces/Travel-With-Sulemana/apps/frontend/.next/static/development/_buildManifest.js.tmp.p3am51k7qqs'[39m
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/Travel-With-Sulemana/apps/frontend/.next/static/development/_buildManifest.js.tmp.demrbjfsa8'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/workspaces/Travel-With-Sulemana/apps/frontend/.next/static/development/_buildManifest.js.tmp.demrbjfsa8'[39m
+}

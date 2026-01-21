@@ -6,62 +6,48 @@
    [1m[38;2;173;127;168m▲ Next.js 15.5.6[39m[22m
 
  [37m[1m [22m[39m Creating an optimized production build ...
- ⚠ Compiled with warnings in 11.1s
-
-./components/Navigation.tsx
-There are multiple modules with names that only differ in casing.
-This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
-Use equal casing. Compare these module identifiers:
-* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/Navigation.tsx|ssr
-    Used by 1 module(s), i. e.
-    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/page.tsx|ssr
-* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/navigation.tsx|ssr
-    Used by 6 module(s), i. e.
-    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/wallet/topup/page.tsx|ssr
-
-Import trace for requested module:
-./components/Navigation.tsx
-./app/page.tsx
-
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
- ⚠ Compiled with warnings in 7.7s
-
-./components/Navigation.tsx
-There are multiple modules with names that only differ in casing.
-This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
-Use equal casing. Compare these module identifiers:
-* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/Navigation.tsx|app-pages-browser
-    Used by 1 module(s), i. e.
-    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/page.tsx|app-pages-browser
-* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/navigation.tsx|app-pages-browser
-    Used by 6 module(s), i. e.
-    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/wallet/transactions/page.tsx|app-pages-browser
-
-Import trace for requested module:
-./components/Navigation.tsx
-./app/page.tsx
-
- [32m[1m✓[22m[39m Compiled successfully in 19.0s
+ [32m[1m✓[22m[39m Compiled successfully in 12.5s
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39mFailed to compile.
+[?25l [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Checking validity of types     [32m[1m✓[22m[39m Checking validity of types 
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/24)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (10/24)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (16/24)  [36m[ ===][39m[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (24/24)
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
-./app/book/[id]/page.tsx:74:25
-Type error: Conversion of type 'ParamValue' to type '1 | 2' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
-  Type 'string[]' is not comparable to type '1 | 2'.
+[4mRoute (app)[24m                                 [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
+┌ ○ /                                    5.74 kB         [37m[1m149 kB[22m[39m
+├ ○ /_not-found                            988 B         [37m[1m103 kB[22m[39m
+├ ○ /about                               4.26 kB         [37m[1m147 kB[22m[39m
+├ ƒ /api/admin/drivers                     155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/admin/stats                       155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/auth/login                        155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/auth/me                           155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/auth/register                     155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/drivers                           155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/drivers/me                        155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/rides                             155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/rides/[id]                        155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/rides/[id]/accept                 155 B         [37m[1m102 kB[22m[39m
+├ ƒ /api/rides/available                   155 B         [37m[1m102 kB[22m[39m
+├ ○ /auth/login                          23.5 kB         [37m[1m134 kB[22m[39m
+├ ○ /blog                                4.22 kB         [37m[1m147 kB[22m[39m
+├ ○ /book                                3.75 kB         [37m[1m147 kB[22m[39m
+├ ƒ /book/[id]                           5.59 kB         [37m[1m148 kB[22m[39m
+├ ○ /contact                             3.92 kB         [37m[1m147 kB[22m[39m
+├ ○ /destinations                        5.07 kB         [37m[1m148 kB[22m[39m
+├ ○ /experiences                         4.13 kB         [37m[1m147 kB[22m[39m
+├ ○ /plan-your-trip                      3.92 kB         [37m[1m147 kB[22m[39m
+├ ○ /robots.txt                            155 B         [37m[1m102 kB[22m[39m
+├ ○ /sitemap.xml                           155 B         [37m[1m102 kB[22m[39m
+└ ○ /watch                                  4 kB         [37m[1m147 kB[22m[39m
++ First Load JS shared by all             [37m[1m102 kB[22m[39m
+  ├ chunks/18-af39a5ba0949faa0.js        45.9 kB
+  ├ chunks/87c73c54-24122e7b92478d00.js  54.2 kB
+  └ other shared chunks (total)          1.92 kB
 
-[0m [90m 72 |[39m   }[33m;[39m
- [90m 73 |[39m
-[31m[1m>[22m[39m[90m 74 |[39m   [36mconst[39m trip [33m=[39m tripData[params[33m.[39mid [36mas[39m keyof [36mtypeof[39m tripData] [33m||[39m tripData[[35m1[39m][33m;[39m
- [90m    |[39m                         [31m[1m^[22m[39m
- [90m 75 |[39m
- [90m 76 |[39m   [36mconst[39m tabs [33m=[39m [
- [90m 77 |[39m     { id[33m:[39m [32m"overview"[39m[33m,[39m label[33m:[39m [32m"Trip Overview"[39m }[33m,[39m[0m
-[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G[?25hNext.js build worker exited with code: 1 and signal: null
-[?25l [36m.[39m [?25h⠙[1G[0K[1mnpm[22m [31merror[39m Lifecycle script `build` failed with error:
-⠙[1G[0K[1mnpm[22m [31merror[39m [94mcode[39m [33m1[39m
-⠙[1G[0K[1mnpm[22m [31merror[39m [94mpath[39m /workspaces/Travel-With-Sulemana/apps/frontend
-⠙[1G[0K[1mnpm[22m [31merror[39m [94mworkspace[39m @travel-with-sulemana/frontend@1.0.0
-⠙[1G[0K[1mnpm[22m [31merror[39m [94mlocation[39m /workspaces/Travel-With-Sulemana/apps/frontend
-⠙[1G[0K[1mnpm[22m [31merror[39m command failed
-⠙[1G[0K[1mnpm[22m [31merror[39m [94mcommand[39m sh -c next build
-⠙[1G[0K
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+[?25h⠙[1G[0K
