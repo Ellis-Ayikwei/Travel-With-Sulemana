@@ -1,37 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Campus Ride - Safe Campus Transport",
-    template: "%s | Campus Ride",
+    default: "Travel with Sulemana - Explore Ghana's Treasures",
+    template: "%s | Travel with Sulemana",
   },
-  description: "Campus ride-hailing: request rides, track live, and pay securely within your campus community.",
+  description: "Discover Ghana's hidden treasures with expert guides. From wildlife safaris to historic sites, experience authentic travel adventures.",
   keywords: [
-    "delivery",
-    "errands",
-    "Ghana",
-    "trusted delivery",
-    "courier",
-    "errand runner",
-    "escrow",
-    "parcel",
+    "Ghana travel",
+    "Ghana tourism",
+    "Ghana tours",
+    "West Africa travel",
+    "Ghana safari",
+    "Ghana destinations",
+    "travel guide Ghana",
+    "Ghana adventures",
   ],
   alternates: {
     canonical: "/",
@@ -39,30 +27,30 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Campus Ride - Safe Campus Transport",
+    title: "Travel with Sulemana - Explore Ghana's Treasures",
     description:
-      "Ride-hailing built for campuses: safety, affordability, transparency",
-    siteName: "Campus Ride",
+      "Discover Ghana's hidden treasures with personalized itineraries and expert local guides",
+    siteName: "Travel with Sulemana",
     images: [
       {
         url:
-          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Campus Ride",
+        alt: "Travel with Sulemana",
       },
     ],
     locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@campusride",
-    creator: "@campusride",
-    title: "Campus Ride - Safe Campus Transport",
+    site: "@travelwithsulemana",
+    creator: "@travelwithsulemana",
+    title: "Travel with Sulemana - Explore Ghana's Treasures",
     description:
-      "Ride-hailing built for campuses: safety, affordability, transparency",
+      "Discover Ghana's hidden treasures with personalized itineraries and expert local guides",
     images: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1200&auto=format&fit=crop",
     ],
   },
   icons: {
@@ -91,7 +79,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body 
-        className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
         <Providers>{children}</Providers>

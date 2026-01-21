@@ -1,7 +1,7 @@
 {
-  "name": "@Campus Ride/shared",
+  "name": "@travel-with-sulemana/shared",
   "version": "1.0.0",
-  "description": "Shared types and utilities for Campus Ride",
+  "description": "Shared types and utilities for Travel with Sulemana",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

@@ -1,0 +1,67 @@
+
+
+> @travel-with-sulemana/frontend@1.0.0 build
+> next build
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.6[39m[22m
+
+ [37m[1m [22m[39m Creating an optimized production build ...
+ ⚠ Compiled with warnings in 11.1s
+
+./components/Navigation.tsx
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/Navigation.tsx|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/page.tsx|ssr
+* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/navigation.tsx|ssr
+    Used by 6 module(s), i. e.
+    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[7].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/wallet/topup/page.tsx|ssr
+
+Import trace for requested module:
+./components/Navigation.tsx
+./app/page.tsx
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ⚠ Compiled with warnings in 7.7s
+
+./components/Navigation.tsx
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/Navigation.tsx|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/page.tsx|app-pages-browser
+* javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/components/navigation.tsx|app-pages-browser
+    Used by 6 module(s), i. e.
+    javascript/auto|/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js!/workspaces/Travel-With-Sulemana/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js??ruleSet[1].rules[16].oneOf[6].use[1]!/workspaces/Travel-With-Sulemana/apps/frontend/app/wallet/transactions/page.tsx|app-pages-browser
+
+Import trace for requested module:
+./components/Navigation.tsx
+./app/page.tsx
+
+ [32m[1m✓[22m[39m Compiled successfully in 19.0s
+ [37m[1m [22m[39m Skipping linting
+[?25l [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Checking validity of types  [36m.[39mFailed to compile.
+
+./app/book/[id]/page.tsx:74:25
+Type error: Conversion of type 'ParamValue' to type '1 | 2' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'string[]' is not comparable to type '1 | 2'.
+
+[0m [90m 72 |[39m   }[33m;[39m
+ [90m 73 |[39m
+[31m[1m>[22m[39m[90m 74 |[39m   [36mconst[39m trip [33m=[39m tripData[params[33m.[39mid [36mas[39m keyof [36mtypeof[39m tripData] [33m||[39m tripData[[35m1[39m][33m;[39m
+ [90m    |[39m                         [31m[1m^[22m[39m
+ [90m 75 |[39m
+ [90m 76 |[39m   [36mconst[39m tabs [33m=[39m [
+ [90m 77 |[39m     { id[33m:[39m [32m"overview"[39m[33m,[39m label[33m:[39m [32m"Trip Overview"[39m }[33m,[39m[0m
+[2K[1G [37m[1m [22m[39m Checking validity of types  [36m..[39m[2K[1G[?25hNext.js build worker exited with code: 1 and signal: null
+[?25l [36m.[39m [?25h⠙[1G[0K[1mnpm[22m [31merror[39m Lifecycle script `build` failed with error:
+⠙[1G[0K[1mnpm[22m [31merror[39m [94mcode[39m [33m1[39m
+⠙[1G[0K[1mnpm[22m [31merror[39m [94mpath[39m /workspaces/Travel-With-Sulemana/apps/frontend
+⠙[1G[0K[1mnpm[22m [31merror[39m [94mworkspace[39m @travel-with-sulemana/frontend@1.0.0
+⠙[1G[0K[1mnpm[22m [31merror[39m [94mlocation[39m /workspaces/Travel-With-Sulemana/apps/frontend
+⠙[1G[0K[1mnpm[22m [31merror[39m command failed
+⠙[1G[0K[1mnpm[22m [31merror[39m [94mcommand[39m sh -c next build
+⠙[1G[0K

@@ -1,8 +1,8 @@
 {
-  "name": "Campus Ride",
+  "name": "Travel with Sulemana",
   "version": "1.0.0",
   "private": true,
-  "description": "Campus Ride - Premium Errand & Delivery Platform",
+  "description": "Travel with Sulemana - Premium Travel & Delivery Platform",
   "workspaces": [
     "apps/*",
     "packages/*"

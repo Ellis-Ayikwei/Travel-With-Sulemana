@@ -25,7 +25,7 @@ export const TRUST_BADGES = {
     category: "performance",
   },
   ELITE_AGENT: {
-    name: "Elite Campus Ride Agent",
+    name: "Elite Travel Agent",
     icon: "👑",
     category: "elite",
   },

@@ -10,7 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-       sans: ["Gilroy", "system-ui", "sans-serif"],
+        sans: ["Campton", "system-ui", "sans-serif"],
+        serif: ["ACaslonPro", "Georgia", "serif"],
+        heading: ["ACaslonPro", "Georgia", "serif"],
       },
       borderRadius: {
         DEFAULT: "0.375rem", // 6px - default rounded

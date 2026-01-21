@@ -3,9 +3,9 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: Campus Ride-postgres
+    container_name: travel-with-sulemana-postgres
     environment:
-      POSTGRES_DB: Campus Ride_db
+      POSTGRES_DB: travel_with_sulemana_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
@@ -20,7 +20,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: Campus Ride-redis
+    container_name: travel-with-sulemana-redis
     ports:
       - "6379:6379"
     volumes:
@@ -35,7 +35,7 @@ services:
     build:
       context: ./apps/backend-py
       dockerfile: Dockerfile
-    container_name: Campus Ride-backend-py
+    container_name: travel-with-sulemana-backend-py
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./apps/backend-py:/app
@@ -45,7 +45,7 @@ services:
       - DEBUG=True
       - DB_HOST=postgres
       - DB_PORT=5432
-      - DB_NAME=Campus Ride_db
+      - DB_NAME=travel_with_sulemana_db
       - DB_USER=postgres
       - DB_PASSWORD=postgres
       - REDIS_URL=redis://redis:6379/1
@@ -60,7 +60,7 @@ services:
     build:
       context: ./apps/backend-node
       dockerfile: Dockerfile
-    container_name: Campus Ride-backend-node
+    container_name: travel-with-sulemana-backend-node
     command: npm run dev
     volumes:
       - ./apps/backend-node:/app
@@ -79,15 +79,15 @@ services:
     build:
       context: ./apps/backend-py
       dockerfile: Dockerfile
-    container_name: Campus Ride-celery-worker
-    command: celery -A Campus Ride worker -l info
+    container_name: travel-with-sulemana-celery-worker
+    command: celery -A travel_with_sulemana worker -l info
     volumes:
       - ./apps/backend-py:/app
     environment:
       - DEBUG=True
       - DB_HOST=postgres
       - DB_PORT=5432
-      - DB_NAME=Campus Ride_db
+      - DB_NAME=travel_with_sulemana_db
       - DB_USER=postgres
       - DB_PASSWORD=postgres
       - REDIS_URL=redis://redis:6379/1

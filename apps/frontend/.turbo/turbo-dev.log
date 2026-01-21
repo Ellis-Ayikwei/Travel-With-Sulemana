@@ -1,0 +1,15 @@
+
+> @travel-with-sulemana/frontend@1.0.0 dev
+> next dev --turbopack
+
+ [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.6[39m[22m (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://10.0.3.148:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1175ms
+ [37m[1m○[22m[39m Compiling / ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ [32m[1m✓[22m[39m Compiled / in 6.6s
+ GET / [32m200[39m in 7124ms

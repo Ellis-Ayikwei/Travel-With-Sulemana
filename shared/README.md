@@ -1,17 +1,17 @@
-# @Campus Ride/shared
+# @travel-with-sulemana/shared
 
-Shared TypeScript types, constants, and utilities for the Campus Ride platform.
+Shared TypeScript types, constants, and utilities for the Travel with Sulemana platform.
 
 ## Usage
 
 ### In Next.js Frontend
 ```typescript
-import { User, Errand, TRUST_BADGES } from "@Campus Ride/shared";
+import { User, Errand, TRUST_BADGES } from "@travel-with-sulemana/shared";
 ```
 
 ### In Node.js Backend
 ```typescript
-import { JWTPayload, ERRAND_STATUS } from "@Campus Ride/shared";
+import { JWTPayload, ERRAND_STATUS } from "@travel-with-sulemana/shared";
 ```
 
 ## Building
