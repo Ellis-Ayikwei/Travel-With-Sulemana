@@ -12,3 +12,20 @@
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
  [32m[1m✓[22m[39m Compiled / in 21.2s
  GET / [32m200[39m in 22023ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 680ms
+ GET /assets/images/logo-dark-mode.jpeg [33m404[39m in 975ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /assets/images/logo-dark-mode.jpeg received [1mnull[22m
+ GET / [32m200[39m in 176ms
+ GET /assets/images/logo-dark-mode.jpeg [33m404[39m in 81ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /assets/images/logo-dark-mode.jpeg received [1mnull[22m
+ GET / [32m200[39m in 335ms
+ [32m[1m✓[22m[39m Compiled in 54ms
+ [32m[1m✓[22m[39m Compiled in 67ms
+ [32m[1m✓[22m[39m Compiled in 37ms
+ [32m[1m✓[22m[39m Compiled in 91ms
+ [32m[1m✓[22m[39m Compiled in 86ms
+ [32m[1m✓[22m[39m Compiled in 74ms
+ [32m[1m✓[22m[39m Compiled in 74ms
+ [32m[1m✓[22m[39m Compiled in 90ms
+ [32m[1m✓[22m[39m Compiled in 101ms

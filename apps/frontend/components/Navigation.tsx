@@ -34,9 +34,9 @@ export default function Navigation() {
           <Link href="/" className="flex items-center gap-2">
             {mounted && (
               <Image
-                src={theme === "dark" ? "/assets/images/logo-dark-mode.jpeg" : "/assets/images/logo-light-mode.png"}
+                src={theme === "dark" ? "/assets/images/logo-dark-mode.png" : "/assets/images/logo-light-mode.png"}
                 alt="Travel with Sulemana"
-                width={40}
+                width={150}
                 height={40}
                 className="rounded-lg"
               />
@@ -44,9 +44,9 @@ export default function Navigation() {
             {!mounted && (
               <div className="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg" />
             )}
-            <span className="text-xl font-semibold text-gray-900 dark:text-white hidden sm:inline">
+            {/* <span className="text-xl font-semibold text-gray-900 dark:text-white hidden sm:inline">
               Travel with Sulemana
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Menu */}
