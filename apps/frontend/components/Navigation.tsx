@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
@@ -31,9 +32,18 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-black dark:bg-white rounded-lg flex items-center justify-center">
-              <span className="text-white dark:text-black font-bold text-xl">T</span>
-            </div>
+            {mounted && (
+              <Image
+                src={theme === "dark" ? "/assets/images/logo-dark-mode.jpeg" : "/assets/images/logo-light-mode.png"}
+                alt="Travel with Sulemana"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
+            )}
+            {!mounted && (
+              <div className="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg" />
+            )}
             <span className="text-xl font-semibold text-gray-900 dark:text-white hidden sm:inline">
               Travel with Sulemana
             </span>
