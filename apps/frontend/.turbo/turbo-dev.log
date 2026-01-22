@@ -29,3 +29,5 @@
  [32m[1m✓[22m[39m Compiled in 74ms
  [32m[1m✓[22m[39m Compiled in 90ms
  [32m[1m✓[22m[39m Compiled in 101ms
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
