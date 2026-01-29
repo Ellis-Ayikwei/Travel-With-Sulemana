@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Campton", "system-ui", "sans-serif"],
-        serif: ["ACaslonPro", "Georgia", "serif"],
-        heading: ["ACaslonPro", "Georgia", "serif"],
+        sans: ["var(--font-libre-caslon)", "system-ui", "sans-serif"],
+        serif: ["var(--font-libre-caslon)", "Georgia", "serif"],
+        heading: ["var(--font-libre-caslon)", "Georgia", "serif"],
       },
       borderRadius: {
         DEFAULT: "0.375rem", // 6px - default rounded

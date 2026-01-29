@@ -2,55 +2,61 @@
 > @travel-with-sulemana/frontend@1.0.0 dev
 > next dev --turbopack
 
-   [1m[38;2;173;127;168m▲ Next.js 15.5.6[39m[22m (Turbopack)
+   [1m[38;2;173;127;168m▲ Next.js 15.5.9[39m[22m (Turbopack)
    - Local:        http://localhost:3000
-   - Network:      http://10.0.0.171:3000
+   - Network:      http://10.0.1.82:3000
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 21.8s
- [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Ready in 1063ms
+ [37m[1m○[22m[39m Compiling /destinations ...
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
- [32m[1m✓[22m[39m Compiled / in 21.2s
- GET / [32m200[39m in 22023ms
- [37m[1m○[22m[39m Compiling /_not-found/page ...
- [32m[1m✓[22m[39m Compiled /_not-found/page in 680ms
- GET /assets/images/logo-dark-mode.jpeg [33m404[39m in 975ms
- [31m[1m⨯[22m[39m The requested resource isn't a valid image for /assets/images/logo-dark-mode.jpeg received [1mnull[22m
- GET / [32m200[39m in 176ms
- GET /assets/images/logo-dark-mode.jpeg [33m404[39m in 81ms
- [31m[1m⨯[22m[39m The requested resource isn't a valid image for /assets/images/logo-dark-mode.jpeg received [1mnull[22m
- GET / [32m200[39m in 335ms
- [32m[1m✓[22m[39m Compiled in 54ms
- [32m[1m✓[22m[39m Compiled in 67ms
- [32m[1m✓[22m[39m Compiled in 37ms
- [32m[1m✓[22m[39m Compiled in 91ms
- [32m[1m✓[22m[39m Compiled in 86ms
- [32m[1m✓[22m[39m Compiled in 74ms
- [32m[1m✓[22m[39m Compiled in 74ms
- [32m[1m✓[22m[39m Compiled in 90ms
- [32m[1m✓[22m[39m Compiled in 101ms
-[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
-[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-65af0c8f53d9201341f5d199871df12.log.
-
-To help make Turbopack better, report this error by ]8;;https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Next.js%20package%20not%20found&body=Turbopack%20version%3A%20%6057992a6e%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ANext.js%20package%20not%20found%0A%0ADebug%20info%3A%0A-%20Execution%20of%20get_entrypoints_with_issues_operation%20failed%0A-%20Execution%20of%20EntrypointsOperation%3A%3Anew%20failed%0A-%20Execution%20of%20Project%3A%3Aentrypoints%20failed%0A-%20Execution%20of%20AppProject%3A%3Aroutes%20failed%0A-%20Execution%20of%20directory_tree_to_entrypoints_internal%20failed%0A-%20Execution%20of%20directory_tree_to_loader_tree%20failed%0A-%20Execution%20of%20get_next_package%20failed%0A-%20Next.js%20package%20not%20found%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace\clicking here.]8;;\
------
-
-Error [TurbopackInternalError]: Next.js package not found
-
-Debug info:
-- Execution of get_entrypoints_with_issues_operation failed
-- Execution of EntrypointsOperation::new failed
-- Execution of Project::entrypoints failed
-- Execution of AppProject::routes failed
-- Execution of directory_tree_to_entrypoints_internal failed
-- Execution of directory_tree_to_loader_tree failed
-- Execution of get_next_package failed
-- Next.js package not found
-    at <unknown> (TurbopackInternalError: Next.js package not found) {
-  location: [90mundefined[39m
-}
-[?25h
-⠙[1G[0K
+ [32m[1m✓[22m[39m Compiled /destinations in 6s
+ GET /destinations [32m200[39m in 6555ms
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 440ms
+ GET /destinationsr [33m404[39m in 599ms
+ GET /destinations [32m200[39m in 148ms
+ [32m[1m✓[22m[39m Compiled / in 463ms
+ GET / [32m200[39m in 528ms
+ [37m[1m○[22m[39m Compiling /experiences ...
+ [32m[1m✓[22m[39m Compiled /experiences in 538ms
+ GET /experiences [32m200[39m in 605ms
+ [37m[1m○[22m[39m Compiling /watch ...
+ [32m[1m✓[22m[39m Compiled /watch in 583ms
+ GET /watch [32m200[39m in 655ms
+ GET /watch [32m200[39m in 123ms
+ [32m[1m✓[22m[39m Compiled /blog in 494ms
+ GET /blog [32m200[39m in 562ms
+ [32m[1m✓[22m[39m Compiled in 3.6s
+ [32m[1m✓[22m[39m Compiled /blog in 31ms
+ GET /blog [32m200[39m in 180ms
+ GET /blog [32m200[39m in 72ms
+ GET /blog [32m200[39m in 71ms
+ GET /blog [32m200[39m in 76ms
+ GET /blog [32m200[39m in 65ms
+ GET /blog [32m200[39m in 126ms
+ [32m[1m✓[22m[39m Compiled in 1345ms
+ [32m[1m✓[22m[39m Compiled /blog in 305ms
+ GET /blog [32m200[39m in 467ms
+ GET /blog [32m200[39m in 108ms
+ GET /blog [32m200[39m in 84ms
+ GET /blog [32m200[39m in 76ms
+ GET /blog [32m200[39m in 73ms
+ GET /blog [32m200[39m in 84ms
+ [32m[1m✓[22m[39m Compiled /watch in 20ms
+ GET /watch [32m200[39m in 106ms
+ [32m[1m✓[22m[39m Compiled /experiences in 79ms
+ GET /experiences [32m200[39m in 186ms
+ [32m[1m✓[22m[39m Compiled /destinations in 21ms
+ GET /destinations [32m200[39m in 106ms
+ [32m[1m✓[22m[39m Compiled / in 20ms
+ GET / [32m200[39m in 131ms
+ GET /destinations [32m200[39m in 55ms
+ GET /blog [32m200[39m in 61ms
+ [32m[1m✓[22m[39m Compiled in 326ms
+ GET /destinations [32m200[39m in 64ms
+ GET / [32m200[39m in 58ms
+ GET /experiences [32m200[39m in 77ms
+ [32m[1m✓[22m[39m Compiled /book/[id] in 418ms
+ GET /book/1 [32m200[39m in 903ms
+ [32m[1m✓[22m[39m Compiled /book in 471ms
+ GET /book [32m200[39m in 549ms

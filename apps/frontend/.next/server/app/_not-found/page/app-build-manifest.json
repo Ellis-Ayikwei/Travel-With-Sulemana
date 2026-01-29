@@ -1,10 +1,13 @@
 {
   "pages": {
     "/_not-found/page": [
-      "static/chunks/apps_frontend_app_globals_75054667.css",
+      "static/chunks/[root-of-the-server]__09a18f5e._.css",
       "static/chunks/node_modules_98f871bb._.js",
       "static/chunks/apps_frontend_6992ea75._.js",
       "static/chunks/apps_frontend_app_layout_tsx_0a548d63._.js",
+      "static/chunks/node_modules_82d251ae._.js",
+      "static/chunks/apps_frontend_36e84c68._.js",
+      "static/chunks/apps_frontend_app_not-found_tsx_e0e8313b._.js",
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
       "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",

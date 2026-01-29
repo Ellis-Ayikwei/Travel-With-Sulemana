@@ -1,8 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import { Libre_Caslon_Text } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+const libreCaslon = Libre_Caslon_Text({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-libre-caslon",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -77,10 +85,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body 
-        suppressHydrationWarning
-      >
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={libreCaslon.variable}
+    >
+      <head>
+        {/* Favicons and manifest */}
+        <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+        {/* Next.js will also inject its own metadata here */}
+      </head>
+      <body className="font-sans" suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
     </html>

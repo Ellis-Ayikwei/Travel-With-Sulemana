@@ -1,305 +1,204 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import {
-  Moon,
-  Sun,
-  Menu,
-  X,
-  Calendar,
-  User,
-  ArrowRight,
-  Search,
-} from "lucide-react";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { Calendar, User, ArrowRight, Search, Clock, Tag } from "lucide-react";
+import { useState, useMemo } from "react";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 export default function BlogPage() {
-  const [mounted, setMounted] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const blogPosts = [
     {
       id: 1,
       title: "10 Hidden Gems in Ghana You Must Visit",
-      excerpt: "Discover the lesser-known destinations that offer authentic experiences and stunning natural beauty.",
-      content: "Ghana is known for its popular destinations like Cape Coast and Mole National Park, but there are countless hidden gems waiting to be explored...",
+      excerpt: "Beyond the bustle of Accra lies a world of pristine waterfalls, ancient architecture, and untouched canopy walkways.",
       category: "Travel Tips",
       author: "Sulemana",
-      date: "2024-12-15",
-      readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800",
+      date: "Dec 15, 2024",
+      readTime: "5 min",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200",
       featured: true,
     },
     {
       id: 2,
       title: "The Best Time to Visit Ghana: A Seasonal Guide",
-      excerpt: "Learn about Ghana's weather patterns and discover the perfect time for your adventure.",
-      content: "Planning a trip to Ghana? Understanding the seasons will help you make the most of your visit...",
+      excerpt: "From the vibrant festivals of August to the cool Harmattan breezes, timing your trip is an art form.",
       category: "Guide",
       author: "Sulemana",
-      date: "2024-12-10",
-      readTime: "7 min read",
+      date: "Dec 10, 2024",
+      readTime: "7 min",
       image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800",
-      featured: true,
+      featured: false,
     },
     {
       id: 3,
       title: "Ghana's Culinary Traditions: Food Stories",
-      excerpt: "Explore the rich history and flavors behind Ghana's most iconic dishes.",
-      content: "Ghanaian cuisine is a reflection of the country's diverse cultures and rich heritage. From jollof rice to fufu...",
+      excerpt: "Explore the rich history and flavors behind Ghana's most iconic dishes, from Jollof wars to authentic Fufu.",
       category: "Culture",
       author: "Ama Owusu",
-      date: "2024-12-05",
-      readTime: "6 min read",
+      date: "Dec 05, 2024",
+      readTime: "6 min",
       image: "https://images.unsplash.com/photo-1568833394510-84331c7a6466?q=80&w=800",
       featured: false,
     },
     {
       id: 4,
       title: "Wildlife Photography: Capturing Africa's Magic",
-      excerpt: "Pro tips for photographing Ghana's incredible wildlife and landscapes.",
-      content: "Whether you're an amateur or professional photographer, Ghana offers endless opportunities for stunning shots...",
+      excerpt: "Pro tips for photographing Ghana's incredible wildlife, from Mole National Park to the Volta Region.",
       category: "Photography",
-      author: "Kwame Photography",
-      date: "2024-11-28",
-      readTime: "8 min read",
+      author: "Kwame Photo",
+      date: "Nov 28, 2024",
+      readTime: "8 min",
       image: "https://images.unsplash.com/photo-1502884593812-c42a7a0e7804?q=80&w=800",
       featured: false,
     },
     {
       id: 5,
-      title: "Sustainable Tourism: Traveling Responsibly in Ghana",
-      excerpt: "How to minimize your environmental impact while exploring Ghana's natural wonders.",
-      content: "As travelers, we have a responsibility to protect the destinations we love. Here's how to travel sustainably in Ghana...",
+      title: "Sustainable Tourism: Traveling Responsibly",
+      excerpt: "How to minimize your footprint while maximizing your impact on local Ghanaian communities.",
       category: "Sustainability",
       author: "Sulemana",
-      date: "2024-11-20",
-      readTime: "6 min read",
+      date: "Nov 20, 2024",
+      readTime: "6 min",
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800",
       featured: false,
     },
     {
       id: 6,
-      title: "Meeting Ghana's Artisans: Craftsmanship Stories",
-      excerpt: "Discover the talented individuals keeping Ghana's traditional crafts alive.",
-      content: "From weaving to pottery, Ghana's artisans create beautiful pieces rooted in tradition and innovation...",
+      title: "Meeting Ghana's Artisans: Craft Stories",
+      excerpt: "Step inside the workshops of the masters keeping Kente weaving and bead-making alive.",
       category: "Culture",
       author: "Ama Owusu",
-      date: "2024-11-15",
-      readTime: "5 min read",
+      date: "Nov 15, 2024",
+      readTime: "5 min",
       image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=800",
       featured: false,
     },
   ];
 
   const categories = ["All", "Travel Tips", "Guide", "Culture", "Photography", "Sustainability"];
-  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredPosts = blogPosts.filter((post) => {
-    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredPosts = useMemo(() => {
+    return blogPosts.filter((post) => {
+      const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
+      const matchesSearch =
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [selectedCategory, searchQuery]);
 
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const regularPosts = filteredPosts.filter((post) => post.id !== featuredPost?.id);
+  const featuredPost = blogPosts.find((p) => p.featured);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-black dark:bg-white rounded-lg flex items-center justify-center">
-                <span className="text-white dark:text-black font-bold text-xl">T</span>
-              </div>
-              <span className="text-xl font-semibold text-gray-900 dark:text-white hidden sm:inline">
-                Travel with Sulemana
-              </span>
-            </Link>
+    <div className="min-h-screen bg-white dark:bg-[#050505] transition-colors duration-500">
+      <Navigation />
 
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Home
-              </Link>
-              <Link href="/destinations" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Destinations
-              </Link>
-              <Link href="/experiences" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Experiences
-              </Link>
-              <Link href="/watch" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Watch
-              </Link>
-              <Link href="/blog" className="text-black dark:text-white font-semibold">
-                Blog
-              </Link>
-              <Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                About
-              </Link>
-              <Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Contact
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-4">
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors rounded-lg"
-                >
-                  {theme === "dark" ? (
-                    <Sun className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                  ) : (
-                    <Moon className="w-5 h-5 text-gray-600" />
-                  )}
-                </button>
-              )}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors rounded-lg"
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
-          </div>
-
-          {mobileMenuOpen && (
-            <div className="md:hidden mt-4 space-y-3 pb-4">
-              <Link href="/" className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Home
-              </Link>
-              <Link href="/destinations" className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Destinations
-              </Link>
-              <Link href="/experiences" className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Experiences
-              </Link>
-              <Link href="/watch" className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Watch
-              </Link>
-              <Link href="/blog" className="block text-black dark:text-white font-semibold">
-                Blog
-              </Link>
-              <Link href="/about" className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                About
-              </Link>
-              <Link href="/contact" className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                Contact
-              </Link>
-            </div>
-          )}
+      {/* --- CINEMATIC HERO --- */}
+      <section className="relative h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/40 z-10" />
+          <motion.img
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 10 }}
+            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2000"
+            className="w-full h-full object-cover"
+            alt="Travel Hero"
+          />
         </div>
-      </nav>
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-gray-900 to-black text-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 relative z-20 mt-20">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Travel Stories & Insights
+            <h1 className="text-7xl md:text-9xl font-black text-white tracking-tighter leading-none mb-6">
+              THE <br />
+              <span className="text-amber-500">JOURNAL.</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl">
-              Read our latest articles about Ghana's destinations, travel tips, and cultural insights.
+            <p className="text-xl md:text-2xl text-gray-200 max-w-xl font-medium leading-relaxed">
+              Stories from the heart of West Africa. Curated guides, cultural deep-dives, and expedition notes.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Search Section */}
-      <section className="py-8 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
-              />
-            </div>
-          </div>
+      {/* --- SEARCH & CATEGORIES (Sticky Glassmorphism) --- */}
+      <section className="sticky top-20 z-40">
+        <div className="container mx-auto px-6 -mt-12">
+          <div className="bg-white/70 dark:bg-black/70 backdrop-blur-2xl p-4 rounded-3xl border border-gray-200 dark:border-white/10 shadow-2xl">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
+              <div className="relative w-full lg:w-96">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search the archives..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-gray-100 dark:bg-white/5 border-none rounded-2xl text-sm focus:ring-2 focus:ring-amber-500 transition-all outline-none"
+                />
+              </div>
 
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all ${
-                  selectedCategory === category
-                    ? "bg-black dark:bg-white text-white dark:text-black"
-                    : "bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-400"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+              <div className="flex gap-2 overflow-x-auto no-scrollbar w-full py-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
+                      selectedCategory === cat
+                        ? "bg-black dark:bg-amber-500 text-white dark:text-black"
+                        : "bg-transparent text-gray-500 hover:text-black dark:hover:text-white"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Post */}
-      {featuredPost && (
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+      {/* --- FEATURED ARTICLE --- */}
+      {selectedCategory === "All" && !searchQuery && featuredPost && (
+        <section className="py-24">
+          <div className="container mx-auto px-6">
             <motion.article
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden"
+              viewport={{ once: true }}
+              className="group relative grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-[3rem] overflow-hidden bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 shadow-2xl shadow-black/5"
             >
-              <div className="h-96 md:h-full relative">
+              <div className="lg:col-span-7 h-[500px] lg:h-[700px] overflow-hidden">
                 <img
                   src={featuredPost.image}
-                  alt={featuredPost.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  alt="Featured"
                 />
               </div>
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-full">
-                    Featured
-                  </span>
+              <div className="lg:col-span-5 p-10 md:p-20 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-8">
+                  <span className="px-3 py-1 bg-amber-500 text-black text-[10px] font-black uppercase tracking-tighter rounded">Featured Story</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{featuredPost.readTime} Read</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-8 leading-[0.9]">
                   {featuredPost.title}
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6 leading-relaxed">
-                  {featuredPost.excerpt}
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed italic">
+                  "{featuredPost.excerpt}"
                 </p>
-                <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span>{featuredPost.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{featuredPost.date}</span>
-                  </div>
-                  <span>{featuredPost.readTime}</span>
-                </div>
                 <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-black hover:bg-gray-900 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black font-semibold rounded-lg transition-colors w-fit"
+                  href={`/blog/${featuredPost.id}`}
+                  className="flex items-center gap-4 text-sm font-black uppercase tracking-[0.2em] group/btn"
                 >
-                  Read Article
-                  <ArrowRight className="w-5 h-5" />
+                  Explore Article <ArrowRight className="w-6 h-6 group-hover/btn:translate-x-3 transition-transform text-amber-500" />
                 </Link>
               </div>
             </motion.article>
@@ -307,138 +206,103 @@ export default function BlogPage() {
         </section>
       )}
 
-      {/* Blog Posts Grid */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: (index % 3) * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="h-48 overflow-hidden bg-gray-200 dark:bg-gray-700">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-300 text-xs font-semibold rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-4 text-xs text-gray-600 dark:text-gray-400 mb-4 pb-4 border-t border-gray-200 dark:border-gray-700 pt-4">
-                    <div className="flex items-center gap-1">
-                      <User className="w-3 h-3" />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      <span>{post.date}</span>
+      {/* --- BLOG GRID --- */}
+      <section className="pb-32">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-16 lg:gap-y-24">
+            <AnimatePresence mode="popLayout">
+              {filteredPosts
+                .filter(p => selectedCategory !== "All" || !p.featured)
+                .map((post, idx) => (
+                <motion.article
+                  key={post.id}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative aspect-[16/10] rounded-3xl overflow-hidden mb-8 shadow-xl">
+                    <img
+                      src={post.image}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      alt={post.title}
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-black text-[10px] font-black uppercase rounded-lg">
+                        {post.category}
+                      </span>
                     </div>
                   </div>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-2 text-black dark:text-white font-semibold hover:gap-3 transition-all"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
+
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3 text-amber-500" /> {post.date}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-amber-500" /> {post.readTime}</span>
+                    </div>
+                    <h3 className="text-3xl font-black tracking-tighter leading-tight group-hover:text-amber-500 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2 leading-relaxed font-medium">
+                      {post.excerpt}
+                    </p>
+                    <div className="pt-6 flex items-center justify-between border-t border-gray-100 dark:border-white/5">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 flex items-center gap-2">
+                        <div className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-500">
+                          {post.author[0]}
+                        </div>
+                        {post.author}
+                      </span>
+                      <ArrowRight className="w-5 h-5 -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all text-amber-500" />
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </AnimatePresence>
           </div>
 
           {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-600 dark:text-gray-400 text-lg">
-                No articles found matching your search.
-              </p>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              className="text-center py-40 border-2 border-dashed border-gray-100 dark:border-white/5 rounded-[3rem]"
+            >
+              <Search className="w-12 h-12 mx-auto text-gray-300 mb-4" />
+              <h3 className="text-2xl font-black tracking-tighter uppercase">No stories found</h3>
+              <p className="text-gray-400 mt-2">Try adjusting your search or category filters.</p>
+            </motion.div>
           )}
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="max-w-2xl mx-auto text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter for travel tips, stories, and exclusive offers.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+      {/* --- PREMIUM NEWSLETTER --- */}
+      <section className="py-24 bg-gray-50 dark:bg-white/5 border-y border-gray-100 dark:border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex-1">
+              <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-none mb-4">
+                JOIN THE <br /> <span className="text-amber-500">INNER CIRCLE.</span>
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 font-medium">
+                Deep-dives into the hidden corners of Ghana, sent once a month. No spam, just pure culture.
+              </p>
+            </div>
+            <div className="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
+                placeholder="Explorer's email"
+                className="px-8 py-5 bg-white dark:bg-black border border-gray-200 dark:border-white/10 rounded-2xl text-sm min-w-[300px] outline-none focus:ring-2 focus:ring-amber-500 transition-all"
               />
-              <button className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors rounded-lg font-semibold">
+              <button className="px-10 py-5 bg-black dark:bg-amber-500 text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-black text-gray-300 py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">T</span>
-                </div>
-                <span className="text-xl font-semibold text-white">Travel with Sulemana</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                Exploring Ghana's hidden treasures and sharing authentic travel experiences.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/" className="hover:text-white transition">Home</Link></li>
-                <li><Link href="/destinations" className="hover:text-white transition">Destinations</Link></li>
-                <li><Link href="/book" className="hover:text-white transition">Book a Trip</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Support</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition">FAQs</a></li>
-                <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Contact</h3>
-              <p className="text-sm text-gray-400">info@travelwithsulemana.com</p>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-            <p>© 2026 Travel with Sulemana. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
