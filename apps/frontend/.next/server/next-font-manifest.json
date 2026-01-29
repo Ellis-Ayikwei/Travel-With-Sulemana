@@ -4,6 +4,10 @@
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],
+    "[project]/apps/frontend/app/about/page": [
+      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
+      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
+    ],
     "[project]/apps/frontend/app/blog/page": [
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
@@ -16,6 +20,10 @@
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],
+    "[project]/apps/frontend/app/contact/page": [
+      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
+      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
+    ],
     "[project]/apps/frontend/app/destinations/page": [
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
@@ -25,6 +33,10 @@
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],
     "[project]/apps/frontend/app/page": [
+      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
+      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
+    ],
+    "[project]/apps/frontend/app/plan-your-trip/page": [
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],

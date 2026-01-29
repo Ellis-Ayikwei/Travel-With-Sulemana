@@ -60,3 +60,16 @@
  GET /book/1 [32m200[39m in 903ms
  [32m[1m✓[22m[39m Compiled /book in 471ms
  GET /book [32m200[39m in 549ms
+ GET /destinations [32m200[39m in 71ms
+ GET /experiences [32m200[39m in 65ms
+ GET /watch [32m200[39m in 65ms
+ [32m[1m✓[22m[39m Compiled /plan-your-trip in 410ms
+ GET /plan-your-trip [32m200[39m in 489ms
+ [32m[1m✓[22m[39m Compiled /about in 413ms
+ GET /about [32m200[39m in 474ms
+ [32m[1m✓[22m[39m Compiled /contact in 388ms
+ GET /contact [32m200[39m in 451ms
+ GET / [32m200[39m in 71ms
+ GET /destinations [32m200[39m in 58ms
+ GET /experiences [32m200[39m in 58ms
+ GET /watch [32m200[39m in 59ms
