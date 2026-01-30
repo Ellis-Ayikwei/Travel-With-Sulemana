@@ -2,74 +2,11 @@
 > @travel-with-sulemana/frontend@1.0.0 dev
 > next dev --turbopack
 
+ [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3001 instead.
    [1m[38;2;173;127;168m▲ Next.js 15.5.9[39m[22m (Turbopack)
-   - Local:        http://localhost:3000
-   - Network:      http://10.0.1.82:3000
+   - Local:        http://localhost:3001
+   - Network:      http://10.0.2.48:3001
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 1063ms
- [37m[1m○[22m[39m Compiling /destinations ...
-[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
- [32m[1m✓[22m[39m Compiled /destinations in 6s
- GET /destinations [32m200[39m in 6555ms
- [32m[1m✓[22m[39m Compiled /_not-found/page in 440ms
- GET /destinationsr [33m404[39m in 599ms
- GET /destinations [32m200[39m in 148ms
- [32m[1m✓[22m[39m Compiled / in 463ms
- GET / [32m200[39m in 528ms
- [37m[1m○[22m[39m Compiling /experiences ...
- [32m[1m✓[22m[39m Compiled /experiences in 538ms
- GET /experiences [32m200[39m in 605ms
- [37m[1m○[22m[39m Compiling /watch ...
- [32m[1m✓[22m[39m Compiled /watch in 583ms
- GET /watch [32m200[39m in 655ms
- GET /watch [32m200[39m in 123ms
- [32m[1m✓[22m[39m Compiled /blog in 494ms
- GET /blog [32m200[39m in 562ms
- [32m[1m✓[22m[39m Compiled in 3.6s
- [32m[1m✓[22m[39m Compiled /blog in 31ms
- GET /blog [32m200[39m in 180ms
- GET /blog [32m200[39m in 72ms
- GET /blog [32m200[39m in 71ms
- GET /blog [32m200[39m in 76ms
- GET /blog [32m200[39m in 65ms
- GET /blog [32m200[39m in 126ms
- [32m[1m✓[22m[39m Compiled in 1345ms
- [32m[1m✓[22m[39m Compiled /blog in 305ms
- GET /blog [32m200[39m in 467ms
- GET /blog [32m200[39m in 108ms
- GET /blog [32m200[39m in 84ms
- GET /blog [32m200[39m in 76ms
- GET /blog [32m200[39m in 73ms
- GET /blog [32m200[39m in 84ms
- [32m[1m✓[22m[39m Compiled /watch in 20ms
- GET /watch [32m200[39m in 106ms
- [32m[1m✓[22m[39m Compiled /experiences in 79ms
- GET /experiences [32m200[39m in 186ms
- [32m[1m✓[22m[39m Compiled /destinations in 21ms
- GET /destinations [32m200[39m in 106ms
- [32m[1m✓[22m[39m Compiled / in 20ms
- GET / [32m200[39m in 131ms
- GET /destinations [32m200[39m in 55ms
- GET /blog [32m200[39m in 61ms
- [32m[1m✓[22m[39m Compiled in 326ms
- GET /destinations [32m200[39m in 64ms
- GET / [32m200[39m in 58ms
- GET /experiences [32m200[39m in 77ms
- [32m[1m✓[22m[39m Compiled /book/[id] in 418ms
- GET /book/1 [32m200[39m in 903ms
- [32m[1m✓[22m[39m Compiled /book in 471ms
- GET /book [32m200[39m in 549ms
- GET /destinations [32m200[39m in 71ms
- GET /experiences [32m200[39m in 65ms
- GET /watch [32m200[39m in 65ms
- [32m[1m✓[22m[39m Compiled /plan-your-trip in 410ms
- GET /plan-your-trip [32m200[39m in 489ms
- [32m[1m✓[22m[39m Compiled /about in 413ms
- GET /about [32m200[39m in 474ms
- [32m[1m✓[22m[39m Compiled /contact in 388ms
- GET /contact [32m200[39m in 451ms
- GET / [32m200[39m in 71ms
- GET /destinations [32m200[39m in 58ms
- GET /experiences [32m200[39m in 58ms
- GET /watch [32m200[39m in 59ms
+ [32m[1m✓[22m[39m Ready in 1227ms
+[?25h
