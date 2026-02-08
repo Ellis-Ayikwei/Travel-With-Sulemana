@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/workspaces/Travel-With-Sulemana/apps/frontend/app/layout":["static/media/dbdc01c23a00f505-s.p.woff2","static/media/bde84f5436717993-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
