@@ -1,0 +1,288 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/rides/[id]",
+      "regex": "^/api/rides/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/rides/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/rides/[id]/accept",
+      "regex": "^/api/rides/([^/]+?)/accept(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/rides/(?<nxtPid>[^/]+?)/accept(?:/)?$"
+    },
+    {
+      "page": "/errands/[id]",
+      "regex": "^/errands/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/errands/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard",
+      "regex": "^/admin/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard(?:/)?$"
+    },
+    {
+      "page": "/admin/drivers",
+      "regex": "^/admin/drivers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/drivers(?:/)?$"
+    },
+    {
+      "page": "/admin/login",
+      "regex": "^/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/login(?:/)?$"
+    },
+    {
+      "page": "/agent",
+      "regex": "^/agent(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent(?:/)?$"
+    },
+    {
+      "page": "/agent/earnings",
+      "regex": "^/agent/earnings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent/earnings(?:/)?$"
+    },
+    {
+      "page": "/agent/history",
+      "regex": "^/agent/history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent/history(?:/)?$"
+    },
+    {
+      "page": "/agent/jobs",
+      "regex": "^/agent/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent/jobs(?:/)?$"
+    },
+    {
+      "page": "/agent/profile",
+      "regex": "^/agent/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent/profile(?:/)?$"
+    },
+    {
+      "page": "/agent/schedule",
+      "regex": "^/agent/schedule(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent/schedule(?:/)?$"
+    },
+    {
+      "page": "/agent/settings",
+      "regex": "^/agent/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agent/settings(?:/)?$"
+    },
+    {
+      "page": "/auth/login",
+      "regex": "^/auth/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/login(?:/)?$"
+    },
+    {
+      "page": "/auth/signup",
+      "regex": "^/auth/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/signup(?:/)?$"
+    },
+    {
+      "page": "/book-ride",
+      "regex": "^/book\\-ride(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/book\\-ride(?:/)?$"
+    },
+    {
+      "page": "/driver/active-ride",
+      "regex": "^/driver/active\\-ride(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/driver/active\\-ride(?:/)?$"
+    },
+    {
+      "page": "/driver/dashboard",
+      "regex": "^/driver/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/driver/dashboard(?:/)?$"
+    },
+    {
+      "page": "/driver/earnings",
+      "regex": "^/driver/earnings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/driver/earnings(?:/)?$"
+    },
+    {
+      "page": "/driver/history",
+      "regex": "^/driver/history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/driver/history(?:/)?$"
+    },
+    {
+      "page": "/driver/register",
+      "regex": "^/driver/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/driver/register(?:/)?$"
+    },
+    {
+      "page": "/errands",
+      "regex": "^/errands(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/errands(?:/)?$"
+    },
+    {
+      "page": "/history",
+      "regex": "^/history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/history(?:/)?$"
+    },
+    {
+      "page": "/notifications",
+      "regex": "^/notifications(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/notifications(?:/)?$"
+    },
+    {
+      "page": "/notifications/preferences",
+      "regex": "^/notifications/preferences(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/notifications/preferences(?:/)?$"
+    },
+    {
+      "page": "/request-errand",
+      "regex": "^/request\\-errand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/request\\-errand(?:/)?$"
+    },
+    {
+      "page": "/reviews",
+      "regex": "^/reviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviews(?:/)?$"
+    },
+    {
+      "page": "/reviews/new",
+      "regex": "^/reviews/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviews/new(?:/)?$"
+    },
+    {
+      "page": "/ride-in-progress",
+      "regex": "^/ride\\-in\\-progress(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ride\\-in\\-progress(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/settings/preferences",
+      "regex": "^/settings/preferences(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings/preferences(?:/)?$"
+    },
+    {
+      "page": "/settings/security",
+      "regex": "^/settings/security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings/security(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/wallet",
+      "regex": "^/wallet(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wallet(?:/)?$"
+    },
+    {
+      "page": "/wallet/escrow",
+      "regex": "^/wallet/escrow(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wallet/escrow(?:/)?$"
+    },
+    {
+      "page": "/wallet/topup",
+      "regex": "^/wallet/topup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wallet/topup(?:/)?$"
+    },
+    {
+      "page": "/wallet/transactions",
+      "regex": "^/wallet/transactions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wallet/transactions(?:/)?$"
+    },
+    {
+      "page": "/wallet/withdraw",
+      "regex": "^/wallet/withdraw(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wallet/withdraw(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

@@ -1,6 +1,5 @@
 node_modules
 apps/frontend/.turbo
-apps/frontend/.next
 # Environment files
 .env
 .env.local
