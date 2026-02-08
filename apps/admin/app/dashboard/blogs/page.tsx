@@ -181,15 +181,12 @@ export default function BlogsPage() {
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Blog Management</h1>
-          {/* @ts-expect-error */}
           <Button type="primary" icon={<PlusOutlined />} onClick={() => handleOpenModal()}>
             New Blog Post
           </Button>
         </div>
 
-        {/* @ts-expect-error */}
         <Spin spinning={loading}>
-          {/* @ts-expect-error */}
           <Table
             columns={columns}
             dataSource={blogs}
@@ -199,7 +196,6 @@ export default function BlogsPage() {
           />
         </Spin>
 
-        {/* @ts-expect-error */}
         <Modal
           title={editingId ? 'Edit Blog Post' : 'Create Blog Post'}
           open={isModalOpen}
@@ -207,99 +203,73 @@ export default function BlogsPage() {
           onCancel={handleCloseModal}
           width={800}
         >
-          {/* @ts-expect-error */}
           <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            {/* @ts-expect-error */}
             <Form.Item
               label="Title"
               name="title"
               rules={[{ required: true, message: 'Please enter title' }]}
             >
-              {/* @ts-expect-error */}
               <Input placeholder="Blog post title" />
             </Form.Item>
 
-            {/* @ts-expect-error */}
             <Form.Item
               label="Excerpt"
               name="excerpt"
               rules={[{ required: true, message: 'Please enter excerpt' }]}
             >
-              {/* @ts-expect-error */}
               <Input.TextArea placeholder="Brief excerpt" rows={2} />
             </Form.Item>
 
-            {/* @ts-expect-error */}
             <Form.Item
               label="Content"
               name="content"
               rules={[{ required: true, message: 'Please enter content' }]}
             >
-              {/* @ts-expect-error */}
               <Input.TextArea placeholder="Full blog content" rows={6} />
             </Form.Item>
 
-            {/* @ts-expect-error */}
             <Form.Item
               label="Category"
               name="category"
               rules={[{ required: true, message: 'Please select category' }]}
             >
-              {/* @ts-expect-error */}
               <Select>
-                {/* @ts-expect-error */}
                 <Select.Option value="Travel Tips">Travel Tips</Select.Option>
-                {/* @ts-expect-error */}
                 <Select.Option value="Guide">Guide</Select.Option>
-                {/* @ts-expect-error */}
                 <Select.Option value="Culture">Culture</Select.Option>
-                {/* @ts-expect-error */}
                 <Select.Option value="Adventure">Adventure</Select.Option>
-                {/* @ts-expect-error */}
                 <Select.Option value="Food">Food</Select.Option>
-                {/* @ts-expect-error */}
                 <Select.Option value="Photography">Photography</Select.Option>
-                {/* @ts-expect-error */}
                 <Select.Option value="Other">Other</Select.Option>
               </Select>
             </Form.Item>
 
-            {/* @ts-expect-error */}
             <Form.Item label="Author" name="author">
-              {/* @ts-expect-error */}
               <Input placeholder="Author name" defaultValue="Sulemana" />
             </Form.Item>
 
-            {/* @ts-expect-error */}
             <Form.Item
               label="Image URL"
               name="image"
               rules={[{ required: true, message: 'Please enter image URL' }]}
             >
-              {/* @ts-expect-error */}
               <Input placeholder="https://..." />
             </Form.Item>
 
-            {/* @ts-expect-error */}
             <Form.Item
               label="Read Time (minutes)"
               name="readTime"
               rules={[{ required: true, message: 'Please enter read time' }]}
             >
-              {/* @ts-expect-error */}
               <Input type="number" placeholder="5" />
             </Form.Item>
 
             <div className="flex gap-4">
-              {/* @ts-expect-error */}
               <Form.Item label="Featured" name="featured" valuePropName="checked">
-                {/* @ts-expect-error */}
                 <Checkbox />
               </Form.Item>
 
-              {/* @ts-expect-error */}
               <Form.Item label="Published" name="published" valuePropName="checked">
-                {/* @ts-expect-error */}
                 <Checkbox />
               </Form.Item>
             </div>

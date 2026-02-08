@@ -203,7 +203,6 @@ export default function ExperiencesPage() {
       key: 'category',
       width: 120,
       render: (text: string) => (
-        // @ts-expect-error
         <Tag>{text}</Tag>
       ),
     },
@@ -238,18 +237,15 @@ export default function ExperiencesPage() {
       key: 'destinationIds',
       width: 150,
       render: (ids: string[]) => (
-        // @ts-expect-error
         <>
           {ids && ids.length > 0 ? (
             ids.slice(0, 2).map((id) => {
               const dest = destinations.find((d) => d.id === id);
-              // @ts-expect-error
               return <Tag key={id}>{dest?.name.split(' ')[0]}</Tag>;
             })
           ) : (
             <span className="text-gray-400">Not mapped</span>
           )}
-          {/* @ts-expect-error */}
           {ids && ids.length > 2 && <Tag>+{ids.length - 2}</Tag>}
         </>
       ),
@@ -260,7 +256,6 @@ export default function ExperiencesPage() {
       key: 'published',
       width: 100,
       render: (published: boolean) => (
-        // @ts-expect-error
         <Tag color={published ? 'green' : 'red'}>{published ? 'Published' : 'Draft'}</Tag>
       ),
     },

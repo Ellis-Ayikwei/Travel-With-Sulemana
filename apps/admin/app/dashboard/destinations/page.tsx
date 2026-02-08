@@ -210,7 +210,6 @@ export default function Destinations() {
       key: 'slug',
       width: 120,
       render: (slug: string) => (
-        // @ts-expect-error
         <Tag>{slug}</Tag>
       ),
     },
@@ -235,7 +234,6 @@ export default function Destinations() {
       render: (ids: string[]) => (
         <>
           {ids && ids.length > 0 ? (
-            // @ts-expect-error
             <Tag>{ids.length} linked</Tag>
           ) : (
             <span className="text-gray-400">None</span>
@@ -248,17 +246,13 @@ export default function Destinations() {
       key: 'action',
       width: 120,
       render: (_: any, record: Destination) => (
-        // @ts-expect-error
         <Space>
-          {/* @ts-expect-error */}
           <Button
             type="primary"
             size="small"
-            // @ts-expect-error
             icon={<EditOutlined />}
             onClick={() => handleOpenModal(record)}
           />
-          {/* @ts-expect-error */}
           <Popconfirm
             title="Delete destination"
             description="Are you sure you want to delete this destination?"
@@ -266,7 +260,6 @@ export default function Destinations() {
             okText="Yes"
             cancelText="No"
           >
-            {/* @ts-expect-error */}
             <Button type="primary" danger size="small" icon={<DeleteOutlined />} />
           </Popconfirm>
         </Space>

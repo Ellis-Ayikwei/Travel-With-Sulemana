@@ -89,7 +89,6 @@ export default function Bookings() {
           completed: 'green',
           cancelled: 'red',
         };
-        // @ts-expect-error
         return <Tag color={colors[status]}>{status}</Tag>;
       },
     },
@@ -103,11 +102,8 @@ export default function Bookings() {
       title: 'Action',
       key: 'action',
       render: () => (
-        // @ts-expect-error
         <Space>
-          {/* @ts-expect-error */}
           <Button type="primary" size="small" icon={<EditOutlined />} />
-          {/* @ts-expect-error */}
           <Button type="primary" danger size="small" icon={<DeleteOutlined />} />
         </Space>
       ),
@@ -134,13 +130,11 @@ export default function Bookings() {
         }}
       >
         <h1>Bookings Management</h1>
-        {/* @ts-expect-error */}
         <Button type="primary" icon={<PlusOutlined />} onClick={handleAddBooking}>
           New Booking
         </Button>
       </div>
 
-      {/* @ts-expect-error */}
       <Table
         columns={columns}
         dataSource={bookings}
@@ -149,55 +143,41 @@ export default function Bookings() {
         pagination={{ pageSize: 10 }}
       />
 
-      {/* @ts-expect-error */}
       <Modal
         title="Add New Booking"
         open={isModalOpen}
         onOk={() => form.submit()}
         onCancel={handleModalClose}
       >
-        {/* @ts-expect-error */}
         <Form form={form} layout="vertical">
-          {/* @ts-expect-error */}
           <Form.Item name="userId" label="User ID" rules={[{ required: true }]}>
-            {/* @ts-expect-error */}
             <Input />
           </Form.Item>
-          {/* @ts-expect-error */}
           <Form.Item name="packageId" label="Package ID" rules={[{ required: true }]}>
-            {/* @ts-expect-error */}
             <Input />
           </Form.Item>
-          {/* @ts-expect-error */}
           <Form.Item
             name="numberOfTravelers"
             label="Number of Travelers"
             rules={[{ required: true }]}
           >
-            {/* @ts-expect-error */}
             <InputNumber min={1} />
           </Form.Item>
-          {/* @ts-expect-error */}
           <Form.Item name="startDate" label="Start Date" rules={[{ required: true }]}>
             <DatePicker />
           </Form.Item>
-          {/* @ts-expect-error */}
           <Form.Item name="endDate" label="End Date" rules={[{ required: true }]}>
             <DatePicker />
           </Form.Item>
-          {/* @ts-expect-error */}
           <Form.Item name="totalPrice" label="Total Price" rules={[{ required: true }]}>
-            {/* @ts-expect-error */}
             <InputNumber min={0} step={100} />
           </Form.Item>
-          {/* @ts-expect-error */}
           <Form.Item
             name="status"
             label="Status"
             rules={[{ required: true }]}
             initialValue="pending"
           >
-            {/* @ts-expect-error */}
             <Select
               options={[
                 { label: 'Pending', value: 'pending' },
