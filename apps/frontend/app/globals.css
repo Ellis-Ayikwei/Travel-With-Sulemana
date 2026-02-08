@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+
+  body {
+    @apply antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Admin pages only: sharp corners */
+[data-admin-page] .admin-card,
+[data-admin-page] .admin-button,
+[data-admin-page] .admin-input,
+[data-admin-page] button,
+[data-admin-page] input,
+[data-admin-page] select,
+[data-admin-page] textarea {
+  border-radius: 0 !important;
+}
