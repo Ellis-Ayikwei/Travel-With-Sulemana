@@ -1,7 +1,5 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build -- --filter=@travel-with-sulemana/frontend",
+  "buildCommand": "npm run build --workspace=@travel-with-sulemana/frontend",
   "outputDirectory": "apps/frontend/.next",
-  "installCommand": "npm install",
-  "framework": "nextjs"
+  "installCommand": "npm install"
 }
