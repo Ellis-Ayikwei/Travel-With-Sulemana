@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import HeroCarousel from "@/components/HeroCarousel";
 
 function JsonLd() {
   const jsonLd = {
@@ -46,6 +47,19 @@ function JsonLd() {
 }
 
 export default function Home() {
+  // Hero carousel images from assets folder
+  const heroImages = [
+    "/assets/images/heroImage1.jpg",
+    "/assets/images/DJI_0215.jpg",
+    "/assets/images/mole.jpg",
+    "/assets/images/larabanga.jpg",
+    "/assets/images/capecoast.webp",
+    "/assets/images/salaga.jpg",
+    "/assets/images/DJI_0483.jpg",
+    "/assets/images/DJI_0352.jpg",
+    "/assets/images/independece_square.jpg",
+  ];
+
   const stats = [
     { value: "50K+", label: "Community members" },
     { value: "120+", label: "Documented destinations" },
@@ -108,18 +122,12 @@ export default function Home() {
       <Navigation />
 
       <main>
-        {/* Hero */}
-        <section className="relative h-[700px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/assets/images/heroImage1.jpg"
-            alt="Mosque with minarets at twilight"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+        {/* Hero Carousel */}
+        <section className="relative">
+        <HeroCarousel images={heroImages} />
         
-        <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -150,6 +158,7 @@ landscapes            </p>
               </Link>
             </div>
           </motion.div>
+        </div>
         </div>
       </section>
 
