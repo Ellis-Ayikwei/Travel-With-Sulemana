@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npm run build --workspace=@travel-with-sulemana/frontend",
-  "outputDirectory": "apps/frontend/.next",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
