@@ -224,7 +224,7 @@ export default function PlanYourTripPage() {
                   ))}
                 </div>
                 <div className="flex gap-4 pt-8">
-                  <Link href="/book" className="flex-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-5 rounded-2xl text-center font-bold hover:opacity-90 transition-opacity">
+                  <Link href="/experiences" className="flex-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-5 rounded-2xl text-center font-bold hover:opacity-90 transition-opacity">
                     Confirm & See Trips
                   </Link>
                   <button onClick={() => setShowSummary(false)} className="px-8 py-5 border border-gray-200 dark:border-gray-800 rounded-2xl font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">

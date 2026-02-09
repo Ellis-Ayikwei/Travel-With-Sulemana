@@ -310,7 +310,7 @@ export default function AboutPage() {
               Join us on an unforgettable journey through Ghana's most captivating destinations.
             </p>
             <Link
-              href="/book"
+              href="/experiences"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors rounded-lg font-semibold"
             >
               Browse Our Trips

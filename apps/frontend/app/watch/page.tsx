@@ -299,7 +299,7 @@ export default function WatchPage() {
                 THE ADVENTURE <br/> STARTS HERE.
             </h2>
             <Link
-              href="/book"
+              href="/experiences"
               className="group inline-flex items-center gap-3 px-10 py-5 bg-gray-900 dark:bg-amber-500 text-white dark:text-black hover:bg-amber-600 dark:hover:bg-white transition-all rounded-full font-black uppercase tracking-widest text-sm shadow-xl"
             >
               Book Your Experience <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />

@@ -233,7 +233,7 @@ export default function UnifiedExpeditionsPage() {
 
                     <div className="flex items-center gap-6 pt-4">
                       <button 
-                         onClick={() => router.push(`/book/${trip.id}`)}
+                         onClick={() => router.push(`/experiences/${trip.id}`)}
                          className="flex-1 px-8 py-5 bg-gray-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-emerald-500 dark:hover:bg-emerald-500 hover:text-white transition-all transform group-hover:translate-x-2"
                       >
                         Reserve Spot

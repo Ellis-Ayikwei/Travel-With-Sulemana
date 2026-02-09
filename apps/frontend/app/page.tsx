@@ -208,7 +208,7 @@ export default function Home() {
       {/* Right Column: Actions */}
       <div className="md:w-[400px] flex flex-col gap-4 mt-10 md:mt-0">
         <Link
-          href="/book"
+          href="/experiences"
           className="group flex items-center justify-center gap-3 px-8 py-5 bg-gray-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-sm rounded-2xl transition-all hover:scale-[1.02] shadow-xl dark:shadow-white/5"
         >
           Book Your Experience
