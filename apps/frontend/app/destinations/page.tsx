@@ -21,6 +21,7 @@ export default function DestinationsPage() {
   const destinations = [
     {
       id: "mole",
+      slug: "mole-national-park",
       name: "Mole National Park",
       region: "northern",
       tagline: "Ghana's Premier Wildlife Safari Destination",
@@ -37,6 +38,7 @@ export default function DestinationsPage() {
     },
     {
       id: "larabanga",
+      slug: "larabanga-mosque",
       name: "Larabanga Mosque",
       region: "northern",
       tagline: "West Africa's Oldest Mosque",
@@ -52,6 +54,7 @@ export default function DestinationsPage() {
     },
     {
       id: "salaga",
+      slug: "salaga-slave-wells",
       name: "Salaga Slave Wells",
       region: "northern",
       tagline: "A Journey Through History",
@@ -68,6 +71,7 @@ export default function DestinationsPage() {
     },
     {
       id: "cape-coast",
+      slug: "cape-coast-castle",
       name: "Cape Coast Castle",
       region: "southern",
       tagline: "Where History Echoes",
@@ -199,7 +203,7 @@ export default function DestinationsPage() {
                 </div>
 
                 <Link
-                  href={`/destinations/${destination.id}`}
+                  href={`/destinations/${destination.slug}`}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-colors"
                 >
                   Learn More
