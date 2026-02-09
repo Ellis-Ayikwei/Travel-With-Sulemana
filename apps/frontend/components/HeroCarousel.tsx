@@ -70,26 +70,29 @@ export default function HeroCarousel({ images }: HeroCarouselProps) {
       {/* Navigation Arrows */}
       <button
         onClick={scrollPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 border border-white/20"
+        type="button"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full transition-all duration-300 border border-white/30 hover:scale-110 active:scale-95 cursor-pointer"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 border border-white/20"
+        type="button"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full transition-all duration-300 border border-white/30 hover:scale-110 active:scale-95 cursor-pointer"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-2">
         {images.map((_, index) => (
           <button
             key={index}
+            type="button"
             onClick={() => scrollTo(index)}
-            className={`transition-all duration-300 rounded-full ${
+            className={`transition-all duration-300 rounded-full cursor-pointer ${
               index === selectedIndex
                 ? "w-8 h-2 bg-white"
                 : "w-2 h-2 bg-white/50 hover:bg-white/75"

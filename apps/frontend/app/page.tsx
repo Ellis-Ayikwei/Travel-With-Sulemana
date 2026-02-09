@@ -126,39 +126,39 @@ export default function Home() {
         <section className="relative">
         <HeroCarousel images={heroImages} />
         
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-              Discover Ghana Through My Lens
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-12 drop-shadow-md">
-Join me on an unforgettable journey exploring Ghana's
-hidden treasures, rich culture, and breathtaking
-landscapes            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/destinations"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-black hover:bg-gray-900 text-white rounded-lg font-semibold transition-colors shadow-lg"
-              >
-                Explore Destinations
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/watch"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-gray-100 text-gray-900 rounded-lg font-semibold transition-colors shadow-lg"
-              >
-                Watch Videos
-                <Youtube className="w-5 h-5" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+        <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+          <div className="container mx-auto px-4 h-full flex items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-3xl text-center pointer-events-auto"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                Discover Ghana Through My Lens
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-100 mb-12 drop-shadow-lg">
+                Join me on an unforgettable journey exploring Ghana's
+                hidden treasures, rich culture, and breathtaking landscapes
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/destinations"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-black hover:bg-gray-900 text-white rounded-lg font-semibold transition-colors shadow-lg"
+                >
+                  Explore Destinations
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/watch"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-gray-100 text-gray-900 rounded-lg font-semibold transition-colors shadow-lg"
+                >
+                  Watch Videos
+                  <Youtube className="w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
