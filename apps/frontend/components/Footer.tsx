@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 import {
   Phone,
   Mail,
@@ -11,20 +14,32 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <footer className="bg-gray-900 dark:bg-black text-gray-300 py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">T</span>
-              </div>
-              <span className="text-xl font-semibold text-white">
-                Travel with<br />Sulemana
-              </span>
-            </div>
+            <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity">
+              {mounted ? (
+                <Image
+                  src={theme === "dark" ? "/assets/images/logo-dark-mode.png" : "/assets/images/logo-light-mode.png"}
+                  alt="Travel with Sulemana"
+                  width={140}
+                  height={38}
+                  className="object-contain"
+                />
+              ) : (
+                <div className="w-32 h-8 bg-gray-700 animate-pulse rounded" />
+              )}
+            </Link>
             <p className="text-gray-400 text-sm">
               Exploring Ghana's hidden treasures and sharing authentic travel experiences.
             </p>
