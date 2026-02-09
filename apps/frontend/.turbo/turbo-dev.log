@@ -27,3 +27,4 @@
  GET / [32m200[39m in 174ms
  GET / [32m200[39m in 423ms
  [32m[1m✓[22m[39m Compiled in 85ms
+ GET / [32m200[39m in 410ms

@@ -71,7 +71,7 @@ export default function HeroCarousel({ images }: HeroCarouselProps) {
       <button
         onClick={scrollPrev}
         type="button"
-        className="absolute left-4 top-[70%] -translate-y-1/2 md:top-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full transition-all duration-300 border border-white/30 hover:scale-110 active:scale-95 cursor-pointer"
+        className="absolute left-4 top-[75%] -translate-y-1/2 md:top-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full transition-all duration-300 border border-white/30 hover:scale-110 active:scale-95 cursor-pointer"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -79,7 +79,7 @@ export default function HeroCarousel({ images }: HeroCarouselProps) {
       <button
         onClick={scrollNext}
         type="button"
-        className="absolute right-4 top-[70%] -translate-y-1/2 md:top-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full transition-all duration-300 border border-white/30 hover:scale-110 active:scale-95 cursor-pointer"
+        className="absolute right-4 top-[75%] -translate-y-1/2 md:top-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full transition-all duration-300 border border-white/30 hover:scale-110 active:scale-95 cursor-pointer"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
