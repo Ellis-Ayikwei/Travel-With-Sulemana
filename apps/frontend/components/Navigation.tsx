@@ -102,7 +102,7 @@ export default function Navigation() {
             )}
 
             <Link 
-              href="/book" 
+              href="/experiences" 
               className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform"
             >
               Book Now <ArrowUpRight className="w-3.5 h-3.5" />
@@ -142,7 +142,7 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link
-                href="/book"
+                href="/experiences"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-4 w-full py-4 bg-amber-500 text-black text-center font-black uppercase tracking-widest rounded-xl"
               >
