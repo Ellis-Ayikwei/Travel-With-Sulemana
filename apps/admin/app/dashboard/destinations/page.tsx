@@ -16,6 +16,7 @@ import {
   Popconfirm,
   Tag,
   Spin,
+  Tooltip,
 } from 'antd';
 import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { TableColumnsType } from 'antd';
@@ -45,19 +46,14 @@ interface Destination {
 }
 
 interface Experience {
-  id: string;
+  _id: string;
   name: string;
+  title?: string;
 }
-
-const availableExperiences: Experience[] = [
-  { id: '1', name: 'Northern Ghana Safari Explorer' },
-  { id: '2', name: 'Cape Coast Historical Journey' },
-  { id: '3', name: 'Kakum & Waterfall Adventure' },
-  { id: '4', name: 'West Coast Cultural Experience' },
-];
 
 export default function Destinations() {
   const [destinations, setDestinations] = useState<Destination[]>([]);
+  const [experiences, setExperiences] = useState<Experience[]>([]);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -65,7 +61,18 @@ export default function Destinations() {
 
   useEffect(() => {
     fetchDestinations();
+    fetchExperiences();
   }, []);
+
+  const fetchExperiences = async () => {
+    try {
+      const response = await fetch(`${API_URL}/api/experiences`);
+      const data = await response.json();
+      setExperiences(Array.isArray(data) ? data : []);
+    } catch (error) {
+      console.error('Failed to fetch experiences:', error);
+    }
+  };
 
   const fetchDestinations = async () => {
     setLoading(true);
@@ -232,16 +239,20 @@ export default function Destinations() {
       dataIndex: 'experienceIds',
       key: 'experienceIds',
       width: 120,
-      render: (ids: string[]) => (
-        <>
-          {ids && ids.length > 0 ? (
-            // @ts-expect-error
-            <Tag>{ids.length} linked</Tag>
-          ) : (
-            <span className="text-gray-400">None</span>
-          )}
-        </>
-      ),
+      render: (ids: string[]) => {
+        if (!ids || ids.length === 0) {
+          return <span className="text-gray-400">None</span>;
+        }
+        
+        const linkedExperiences = experiences.filter(exp => ids.includes(exp._id));
+        const expNames = linkedExperiences.map(exp => exp.name || exp.title).join(', ');
+        
+        return (
+          <Tooltip title={expNames || 'Experiences linked'}>
+            <Tag color="blue">{ids.length} linked</Tag>
+          </Tooltip>
+        );
+      },
     },
     {
       title: 'Action',
@@ -425,11 +436,15 @@ export default function Destinations() {
             help="Select which experiences include this destination"
           >
             <Checkbox.Group>
-              {availableExperiences.map((exp) => (
-                <div key={exp.id} style={{ marginBottom: '8px' }}>
-                  <Checkbox value={exp.id}>{exp.name}</Checkbox>
-                </div>
-              ))}
+              {experiences.length > 0 ? (
+                experiences.map((exp) => (
+                  <div key={exp._id} style={{ marginBottom: '8px' }}>
+                    <Checkbox value={exp._id}>{exp.name || exp.title}</Checkbox>
+                  </div>
+                ))
+              ) : (
+                <div className="text-gray-500">No experiences available. Create experiences first.</div>
+              )}
             </Checkbox.Group>
           </Form.Item>
 
