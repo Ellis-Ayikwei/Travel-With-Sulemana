@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// @ts-nocheck
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -185,22 +181,15 @@ export default function BlogsPage() {
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Blog Management</h1>
-<<<<<<< HEAD
           {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Button type="primary" icon={<PlusOutlined />} onClick={() => handleOpenModal()}>
             New Blog Post
           </Button>
         </div>
 
-<<<<<<< HEAD
         {/* @ts-expect-error */}
         <Spin spinning={loading}>
           {/* @ts-expect-error */}
-=======
-        <Spin spinning={loading}>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Table
             columns={columns}
             dataSource={blogs}
@@ -210,10 +199,7 @@ export default function BlogsPage() {
           />
         </Spin>
 
-<<<<<<< HEAD
         {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <Modal
           title={editingId ? 'Edit Blog Post' : 'Create Blog Post'}
           open={isModalOpen}
@@ -221,67 +207,44 @@ export default function BlogsPage() {
           onCancel={handleCloseModal}
           width={800}
         >
-<<<<<<< HEAD
           {/* @ts-expect-error */}
           <Form form={form} layout="vertical" onFinish={handleSubmit}>
             {/* @ts-expect-error */}
-=======
-          <Form form={form} layout="vertical" onFinish={handleSubmit}>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Form.Item
               label="Title"
               name="title"
               rules={[{ required: true, message: 'Please enter title' }]}
             >
-<<<<<<< HEAD
               {/* @ts-expect-error */}
               <Input placeholder="Blog post title" />
             </Form.Item>
 
             {/* @ts-expect-error */}
-=======
-              <Input placeholder="Blog post title" />
-            </Form.Item>
-
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Form.Item
               label="Excerpt"
               name="excerpt"
               rules={[{ required: true, message: 'Please enter excerpt' }]}
             >
-<<<<<<< HEAD
               {/* @ts-expect-error */}
               <Input.TextArea placeholder="Brief excerpt" rows={2} />
             </Form.Item>
 
             {/* @ts-expect-error */}
-=======
-              <Input.TextArea placeholder="Brief excerpt" rows={2} />
-            </Form.Item>
-
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Form.Item
               label="Content"
               name="content"
               rules={[{ required: true, message: 'Please enter content' }]}
             >
-<<<<<<< HEAD
               {/* @ts-expect-error */}
               <Input.TextArea placeholder="Full blog content" rows={6} />
             </Form.Item>
 
             {/* @ts-expect-error */}
-=======
-              <Input.TextArea placeholder="Full blog content" rows={6} />
-            </Form.Item>
-
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Form.Item
               label="Category"
               name="category"
               rules={[{ required: true, message: 'Please select category' }]}
             >
-<<<<<<< HEAD
               {/* @ts-expect-error */}
               <Select>
                 {/* @ts-expect-error */}
@@ -297,20 +260,10 @@ export default function BlogsPage() {
                 {/* @ts-expect-error */}
                 <Select.Option value="Photography">Photography</Select.Option>
                 {/* @ts-expect-error */}
-=======
-              <Select>
-                <Select.Option value="Travel Tips">Travel Tips</Select.Option>
-                <Select.Option value="Guide">Guide</Select.Option>
-                <Select.Option value="Culture">Culture</Select.Option>
-                <Select.Option value="Adventure">Adventure</Select.Option>
-                <Select.Option value="Food">Food</Select.Option>
-                <Select.Option value="Photography">Photography</Select.Option>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
                 <Select.Option value="Other">Other</Select.Option>
               </Select>
             </Form.Item>
 
-<<<<<<< HEAD
             {/* @ts-expect-error */}
             <Form.Item label="Author" name="author">
               {/* @ts-expect-error */}
@@ -318,42 +271,26 @@ export default function BlogsPage() {
             </Form.Item>
 
             {/* @ts-expect-error */}
-=======
-            <Form.Item label="Author" name="author">
-              <Input placeholder="Author name" defaultValue="Sulemana" />
-            </Form.Item>
-
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Form.Item
               label="Image URL"
               name="image"
               rules={[{ required: true, message: 'Please enter image URL' }]}
             >
-<<<<<<< HEAD
               {/* @ts-expect-error */}
               <Input placeholder="https://..." />
             </Form.Item>
 
             {/* @ts-expect-error */}
-=======
-              <Input placeholder="https://..." />
-            </Form.Item>
-
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Form.Item
               label="Read Time (minutes)"
               name="readTime"
               rules={[{ required: true, message: 'Please enter read time' }]}
             >
-<<<<<<< HEAD
               {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
               <Input type="number" placeholder="5" />
             </Form.Item>
 
             <div className="flex gap-4">
-<<<<<<< HEAD
               {/* @ts-expect-error */}
               <Form.Item label="Featured" name="featured" valuePropName="checked">
                 {/* @ts-expect-error */}
@@ -363,13 +300,6 @@ export default function BlogsPage() {
               {/* @ts-expect-error */}
               <Form.Item label="Published" name="published" valuePropName="checked">
                 {/* @ts-expect-error */}
-=======
-              <Form.Item label="Featured" name="featured" valuePropName="checked">
-                <Checkbox />
-              </Form.Item>
-
-              <Form.Item label="Published" name="published" valuePropName="checked">
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
                 <Checkbox />
               </Form.Item>
             </div>

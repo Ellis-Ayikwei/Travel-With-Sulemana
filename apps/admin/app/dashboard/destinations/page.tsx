@@ -16,10 +16,7 @@ import {
   Popconfirm,
   Tag,
   Spin,
-<<<<<<< HEAD
   Tooltip,
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
 } from 'antd';
 import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { TableColumnsType } from 'antd';
@@ -49,7 +46,6 @@ interface Destination {
 }
 
 interface Experience {
-<<<<<<< HEAD
   _id: string;
   name: string;
   title?: string;
@@ -58,21 +54,6 @@ interface Experience {
 export default function Destinations() {
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [experiences, setExperiences] = useState<Experience[]>([]);
-=======
-  id: string;
-  name: string;
-}
-
-const availableExperiences: Experience[] = [
-  { id: '1', name: 'Northern Ghana Safari Explorer' },
-  { id: '2', name: 'Cape Coast Historical Journey' },
-  { id: '3', name: 'Kakum & Waterfall Adventure' },
-  { id: '4', name: 'West Coast Cultural Experience' },
-];
-
-export default function Destinations() {
-  const [destinations, setDestinations] = useState<Destination[]>([]);
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -80,7 +61,6 @@ export default function Destinations() {
 
   useEffect(() => {
     fetchDestinations();
-<<<<<<< HEAD
     fetchExperiences();
   }, []);
 
@@ -94,10 +74,6 @@ export default function Destinations() {
     }
   };
 
-=======
-  }, []);
-
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
   const fetchDestinations = async () => {
     setLoading(true);
     try {
@@ -241,10 +217,7 @@ export default function Destinations() {
       key: 'slug',
       width: 120,
       render: (slug: string) => (
-<<<<<<< HEAD
         // @ts-expect-error
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <Tag>{slug}</Tag>
       ),
     },
@@ -266,7 +239,6 @@ export default function Destinations() {
       dataIndex: 'experienceIds',
       key: 'experienceIds',
       width: 120,
-<<<<<<< HEAD
       render: (ids: string[]) => {
         if (!ids || ids.length === 0) {
           return <span className="text-gray-400">None</span>;
@@ -281,24 +253,12 @@ export default function Destinations() {
           </Tooltip>
         );
       },
-=======
-      render: (ids: string[]) => (
-        <>
-          {ids && ids.length > 0 ? (
-            <Tag>{ids.length} linked</Tag>
-          ) : (
-            <span className="text-gray-400">None</span>
-          )}
-        </>
-      ),
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
     },
     {
       title: 'Action',
       key: 'action',
       width: 120,
       render: (_: any, record: Destination) => (
-<<<<<<< HEAD
         // @ts-expect-error
         <Space>
           {/* @ts-expect-error */}
@@ -310,15 +270,6 @@ export default function Destinations() {
             onClick={() => handleOpenModal(record)}
           />
           {/* @ts-expect-error */}
-=======
-        <Space>
-          <Button
-            type="primary"
-            size="small"
-            icon={<EditOutlined />}
-            onClick={() => handleOpenModal(record)}
-          />
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Popconfirm
             title="Delete destination"
             description="Are you sure you want to delete this destination?"
@@ -326,10 +277,7 @@ export default function Destinations() {
             okText="Yes"
             cancelText="No"
           >
-<<<<<<< HEAD
             {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Button type="primary" danger size="small" icon={<DeleteOutlined />} />
           </Popconfirm>
         </Space>
@@ -488,7 +436,6 @@ export default function Destinations() {
             help="Select which experiences include this destination"
           >
             <Checkbox.Group>
-<<<<<<< HEAD
               {experiences.length > 0 ? (
                 experiences.map((exp) => (
                   <div key={exp._id} style={{ marginBottom: '8px' }}>
@@ -498,13 +445,6 @@ export default function Destinations() {
               ) : (
                 <div className="text-gray-500">No experiences available. Create experiences first.</div>
               )}
-=======
-              {availableExperiences.map((exp) => (
-                <div key={exp.id} style={{ marginBottom: '8px' }}>
-                  <Checkbox value={exp.id}>{exp.name}</Checkbox>
-                </div>
-              ))}
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             </Checkbox.Group>
           </Form.Item>
 

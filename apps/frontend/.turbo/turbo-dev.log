@@ -2,15 +2,26 @@
 > @travel-with-sulemana/frontend@1.0.0 dev
 > next dev --turbopack
 
- [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3002 instead.
+ [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3001 instead.
    [1m[38;2;173;127;168m▲ Next.js 15.5.9[39m[22m (Turbopack)
-   - Local:        http://localhost:3002
-   - Network:      http://10.0.0.11:3002
+   - Local:        http://localhost:3001
+   - Network:      http://10.0.0.243:3001
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 1680ms
+ [32m[1m✓[22m[39m Ready in 2s
  [37m[1m○[22m[39m Compiling / ...
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
- [32m[1m✓[22m[39m Compiled / in 5.9s
- GET / [32m200[39m in 6560ms
-[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ [32m[1m✓[22m[39m Compiled / in 6.4s
+ GET / [32m200[39m in 6984ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 662ms
+ GET /assets/images/salaga.jpg [33m404[39m in 1001ms
+ GET /assets/images/capecoast.webp [33m404[39m in 1199ms
+ GET /assets/images/heroImage1.jpg [33m404[39m in 1189ms
+ GET /assets/images/independece_square.jpg [33m404[39m in 778ms
+ GET /assets/images/larabanga.jpg [33m404[39m in 1140ms
+ GET /assets/images/mole.jpg [33m404[39m in 1163ms
+ GET /assets/images/IMG_2220.jpg [33m404[39m in 93ms
+ GET /assets/images/logo-light-mode.png [33m404[39m in 150ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /assets/images/logo-light-mode.png received [1mnull[22m
+ GET / [32m200[39m in 174ms

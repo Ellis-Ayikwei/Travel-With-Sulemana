@@ -2,101 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:3000</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>http://localhost:3000/dashboard</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/errands</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/agent</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/admin</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/wallet</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/history</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/auth/login</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/auth/signup</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://localhost:3000/request-errand</loc>
-<<<<<<< HEAD
-<lastmod>2026-02-09T01:18:36.892Z</lastmod>
-=======
-<lastmod>2026-02-08T22:29:47.357Z</lastmod>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
+<lastmod>2026-02-09T22:49:41.343Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>

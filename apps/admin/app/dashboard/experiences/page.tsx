@@ -203,10 +203,7 @@ export default function ExperiencesPage() {
       key: 'category',
       width: 120,
       render: (text: string) => (
-<<<<<<< HEAD
         // @ts-expect-error
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <Tag>{text}</Tag>
       ),
     },
@@ -241,27 +238,18 @@ export default function ExperiencesPage() {
       key: 'destinationIds',
       width: 150,
       render: (ids: string[]) => (
-<<<<<<< HEAD
         // @ts-expect-error
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <>
           {ids && ids.length > 0 ? (
             ids.slice(0, 2).map((id) => {
               const dest = destinations.find((d) => d.id === id);
-<<<<<<< HEAD
               // @ts-expect-error
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
               return <Tag key={id}>{dest?.name.split(' ')[0]}</Tag>;
             })
           ) : (
             <span className="text-gray-400">Not mapped</span>
           )}
-<<<<<<< HEAD
           {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           {ids && ids.length > 2 && <Tag>+{ids.length - 2}</Tag>}
         </>
       ),
@@ -272,10 +260,7 @@ export default function ExperiencesPage() {
       key: 'published',
       width: 100,
       render: (published: boolean) => (
-<<<<<<< HEAD
         // @ts-expect-error
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <Tag color={published ? 'green' : 'red'}>{published ? 'Published' : 'Draft'}</Tag>
       ),
     },

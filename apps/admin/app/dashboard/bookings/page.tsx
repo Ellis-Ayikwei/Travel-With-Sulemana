@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// @ts-nocheck
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -93,10 +89,7 @@ export default function Bookings() {
           completed: 'green',
           cancelled: 'red',
         };
-<<<<<<< HEAD
         // @ts-expect-error
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         return <Tag color={colors[status]}>{status}</Tag>;
       },
     },
@@ -110,16 +103,11 @@ export default function Bookings() {
       title: 'Action',
       key: 'action',
       render: () => (
-<<<<<<< HEAD
         // @ts-expect-error
         <Space>
           {/* @ts-expect-error */}
           <Button type="primary" size="small" icon={<EditOutlined />} />
           {/* @ts-expect-error */}
-=======
-        <Space>
-          <Button type="primary" size="small" icon={<EditOutlined />} />
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Button type="primary" danger size="small" icon={<DeleteOutlined />} />
         </Space>
       ),
@@ -146,19 +134,13 @@ export default function Bookings() {
         }}
       >
         <h1>Bookings Management</h1>
-<<<<<<< HEAD
         {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <Button type="primary" icon={<PlusOutlined />} onClick={handleAddBooking}>
           New Booking
         </Button>
       </div>
 
-<<<<<<< HEAD
       {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
       <Table
         columns={columns}
         dataSource={bookings}
@@ -167,17 +149,13 @@ export default function Bookings() {
         pagination={{ pageSize: 10 }}
       />
 
-<<<<<<< HEAD
       {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
       <Modal
         title="Add New Booking"
         open={isModalOpen}
         onOk={() => form.submit()}
         onCancel={handleModalClose}
       >
-<<<<<<< HEAD
         {/* @ts-expect-error */}
         <Form form={form} layout="vertical">
           {/* @ts-expect-error */}
@@ -191,21 +169,11 @@ export default function Bookings() {
             <Input />
           </Form.Item>
           {/* @ts-expect-error */}
-=======
-        <Form form={form} layout="vertical">
-          <Form.Item name="userId" label="User ID" rules={[{ required: true }]}>
-            <Input />
-          </Form.Item>
-          <Form.Item name="packageId" label="Package ID" rules={[{ required: true }]}>
-            <Input />
-          </Form.Item>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item
             name="numberOfTravelers"
             label="Number of Travelers"
             rules={[{ required: true }]}
           >
-<<<<<<< HEAD
             {/* @ts-expect-error */}
             <InputNumber min={1} />
           </Form.Item>
@@ -223,29 +191,13 @@ export default function Bookings() {
             <InputNumber min={0} step={100} />
           </Form.Item>
           {/* @ts-expect-error */}
-=======
-            <InputNumber min={1} />
-          </Form.Item>
-          <Form.Item name="startDate" label="Start Date" rules={[{ required: true }]}>
-            <DatePicker />
-          </Form.Item>
-          <Form.Item name="endDate" label="End Date" rules={[{ required: true }]}>
-            <DatePicker />
-          </Form.Item>
-          <Form.Item name="totalPrice" label="Total Price" rules={[{ required: true }]}>
-            <InputNumber min={0} step={100} />
-          </Form.Item>
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item
             name="status"
             label="Status"
             rules={[{ required: true }]}
             initialValue="pending"
           >
-<<<<<<< HEAD
             {/* @ts-expect-error */}
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Select
               options={[
                 { label: 'Pending', value: 'pending' },

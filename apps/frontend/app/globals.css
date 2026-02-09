@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Embla Carousel Styles */
 .embla {
   overflow: hidden;
@@ -40,8 +39,6 @@
   font-display: swap;
 }
 
-=======
->>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
 @layer base {
   * {
     @apply border-gray-200 dark:border-gray-800;
@@ -49,6 +46,11 @@
 
   body {
     @apply antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-white;
+    font-family: 'Campton', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'ACaslonPro', Georgia, serif;
   }
 }
 
