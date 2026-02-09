@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import {
   Phone,
@@ -15,7 +14,6 @@ import {
 
 export default function Footer() {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -30,7 +28,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity">
               {mounted ? (
                 <Image
-                  src={theme === "dark" ? "/assets/images/logo-dark-mode.png" : "/assets/images/logo-light-mode.png"}
+                  src="/assets/images/logo-dark-mode.png"
                   alt="Travel with Sulemana"
                   width={140}
                   height={38}
