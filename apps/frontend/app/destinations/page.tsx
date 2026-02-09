@@ -3,12 +3,29 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Star, Clock, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import { API_URL } from "@/lib/api";
+
+interface Destination {
+  _id: string;
+  slug: string;
+  name: string;
+  region: string;
+  tagline?: string;
+  description: string;
+  image: string;
+  highlights?: string[];
+  duration?: string;
+  bestTime?: string;
+  rating?: number;
+}
 
 export default function DestinationsPage() {
   const [selectedRegion, setSelectedRegion] = useState("all");
+  const [destinations, setDestinations] = useState<Destination[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const regions = [
     { id: "all", label: "All Destinations" },
@@ -18,7 +35,8 @@ export default function DestinationsPage() {
     { id: "western", label: "Western Ghana" },
   ];
 
-  const destinations = [
+  // Fallback static destinations in case API fails
+  const staticDestinations = [
     {
       id: "mole",
       slug: "mole-national-park",
@@ -87,9 +105,39 @@ export default function DestinationsPage() {
     }
   ];
 
+  useEffect(() => {
+    fetchDestinations();
+  }, []);
+
+  const fetchDestinations = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(`${API_URL}/api/destinations`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        if (Array.isArray(data) && data.length > 0) {
+          setDestinations(data);
+        } else {
+          // Use static data if API returns empty
+          setDestinations(staticDestinations);
+        }
+      } else {
+        // Use static data if API fails
+        setDestinations(staticDestinations);
+      }
+    } catch (error) {
+      console.error("Failed to fetch destinations:", error);
+      // Use static data as fallback
+      setDestinations(staticDestinations);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const filteredDestinations = selectedRegion === "all" 
     ? destinations 
-    : destinations.filter(d => d.region === selectedRegion);
+    : destinations.filter(d => d.region?.toLowerCase() === selectedRegion);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -141,7 +189,17 @@ export default function DestinationsPage() {
       {/* Destinations List */}
       <section className="py-16">
         <div className="container mx-auto px-4 space-y-12">
-          {filteredDestinations.map((destination, index) => (
+          {loading ? (
+            <div className="text-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
+              <p className="text-gray-600 dark:text-gray-400">Loading destinations...</p>
+            </div>
+          ) : filteredDestinations.length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-gray-600 dark:text-gray-400">No destinations found in this region.</p>
+            </div>
+          ) : (
+            filteredDestinations.map((destination, index) => (
             <motion.div
               key={destination.id}
               initial={{ opacity: 0, y: 30 }}
@@ -176,30 +234,42 @@ export default function DestinationsPage() {
                 </p>
 
                 {/* Highlights */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    Highlights
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {destination.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                        <ChevronRight className="w-4 h-4 text-gray-700 dark:text-gray-300" />
-                        <span>{highlight}</span>
-                      </div>
-                    ))}
+                {destination.highlights && destination.highlights.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                      Highlights
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {destination.highlights.map((highlight, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                          <ChevronRight className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                          <span>{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Meta Info */}
                 <div className="flex flex-wrap gap-6 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                    <Clock className="w-5 h-5" />
-                    <span>{destination.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                    <Star className="w-5 h-5" />
-                    <span>Best: {destination.bestTime}</span>
-                  </div>
+                  {destination.duration && (
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <Clock className="w-5 h-5" />
+                      <span>{destination.duration}</span>
+                    </div>
+                  )}
+                  {destination.bestTime && (
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <Star className="w-5 h-5" />
+                      <span>Best: {destination.bestTime}</span>
+                    </div>
+                  )}
+                  {destination.rating && (
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      <span>{destination.rating}</span>
+                    </div>
+                  )}
                 </div>
 
                 <Link
@@ -211,7 +281,8 @@ export default function DestinationsPage() {
                 </Link>
               </div>
             </motion.div>
-          ))}
+            ))
+          )}
         </div>
       </section>
 
