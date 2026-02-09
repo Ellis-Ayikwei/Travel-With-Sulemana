@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// @ts-nocheck
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -163,7 +167,10 @@ export default function CarouselPage() {
       key: 'preview',
       width: 100,
       render: (text: string) => (
+<<<<<<< HEAD
         // @ts-expect-error
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <AntImage src={text} alt="carousel" style={{ maxHeight: '60px' }} />
       ),
     },
@@ -191,19 +198,28 @@ export default function CarouselPage() {
       key: 'actions',
       width: 120,
       render: (text: string, record: CarouselImage) => (
+<<<<<<< HEAD
         // @ts-expect-error
         <Space>
           {/* @ts-expect-error */}
           <Button
             // @ts-expect-error
+=======
+        <Space>
+          <Button
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             icon={<EditOutlined />}
             onClick={() => handleEdit(record)}
             type="primary"
             size="small"
           />
+<<<<<<< HEAD
           {/* @ts-expect-error */}
           <Button
             // @ts-expect-error
+=======
+          <Button
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             icon={<DeleteOutlined />}
             onClick={() => handleDelete(record.id)}
             danger
@@ -218,10 +234,15 @@ export default function CarouselPage() {
     <div style={{ padding: '24px' }}>
       <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h1>Carousel Management</h1>
+<<<<<<< HEAD
         {/* @ts-expect-error */}
         <Button
           type="primary"
           // @ts-expect-error
+=======
+        <Button
+          type="primary"
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           icon={<PlusOutlined />}
           onClick={() => setIsModalVisible(true)}
         >
@@ -229,7 +250,10 @@ export default function CarouselPage() {
         </Button>
       </div>
 
+<<<<<<< HEAD
       {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
       <Table
         columns={columns}
         dataSource={images}
@@ -238,31 +262,46 @@ export default function CarouselPage() {
         pagination={{ pageSize: 10 }}
       />
 
+<<<<<<< HEAD
       {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
       <Modal
         title={editingId ? 'Edit Carousel Image' : 'Add Carousel Image'}
         open={isModalVisible}
         onCancel={handleModalClose}
         onOk={() => form.submit()}
       >
+<<<<<<< HEAD
         {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
         <Form
           form={form}
           layout="vertical"
           onFinish={handleSave}
         >
+<<<<<<< HEAD
           {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item
             label="Image URL"
             name="imageUrl"
             rules={[{ required: false, message: 'Please enter image URL' }]}
             tooltip="Either upload an image or provide a URL"
           >
+<<<<<<< HEAD
             {/* @ts-expect-error */}
             <Input placeholder="https://example.com/image.jpg" />
           </Form.Item>
 
           {/* @ts-expect-error */}
+=======
+            <Input placeholder="https://example.com/image.jpg" />
+          </Form.Item>
+
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item label="Or Upload Image">
             <Upload
               maxCount={1}
@@ -270,39 +309,60 @@ export default function CarouselPage() {
               onChange={(info) => setFileList(info.fileList)}
               beforeUpload={() => false}
             >
+<<<<<<< HEAD
               {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
               <Button>Select Image</Button>
             </Upload>
           </Form.Item>
 
+<<<<<<< HEAD
           {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item
             label="Alt Text"
             name="alt"
             rules={[{ required: true, message: 'Please enter alt text' }]}
           >
+<<<<<<< HEAD
             {/* @ts-expect-error */}
             <Input placeholder="Describing the image for accessibility" />
           </Form.Item>
 
           {/* @ts-expect-error */}
+=======
+            <Input placeholder="Describing the image for accessibility" />
+          </Form.Item>
+
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item
             label="Order"
             name="order"
             initialValue={0}
           >
+<<<<<<< HEAD
             {/* @ts-expect-error */}
             <InputNumber min={0} />
           </Form.Item>
 
           {/* @ts-expect-error */}
+=======
+            <InputNumber min={0} />
+          </Form.Item>
+
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
           <Form.Item
             label="Active"
             name="active"
             valuePropName="checked"
             initialValue={true}
           >
+<<<<<<< HEAD
             {/* @ts-expect-error */}
+=======
+>>>>>>> 47b07d669aa6b92cd2509c6b42730bdd3cb8c4f6
             <Switch />
           </Form.Item>
         </Form>

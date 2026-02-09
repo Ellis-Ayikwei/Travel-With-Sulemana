@@ -6,9 +6,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { AuthAPI } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
 import axiosInstance from "@/lib/api";
-import Navigation from "@/components/Navigation";
 
-function LoginForm() {
+function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { login } = useAuth();
@@ -86,7 +85,22 @@ function LoginForm() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
-      <Navigation />
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-black/80 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/">
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Campus Ride</h1>
+            </Link>
+            <Link
+              href="/"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              Back to Home
+            </Link>
+          </div>
+        </div>
+      </nav>
 
       {/* Login Form */}
       <div className="flex items-center justify-center px-4 py-16">
@@ -155,12 +169,8 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center">
-        <div className="text-gray-600 dark:text-gray-400">Loading...</div>
-      </div>
-    }>
-      <LoginForm />
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <LoginContent />
     </Suspense>
   );
 }

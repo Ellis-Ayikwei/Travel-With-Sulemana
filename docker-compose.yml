@@ -98,6 +98,23 @@ services:
       redis:
         condition: service_healthy
 
+  admin:
+    build:
+      context: ./apps/admin
+      dockerfile: Dockerfile
+    container_name: travel-with-sulemana-admin
+    command: npm run dev
+    volumes:
+      - ./apps/admin:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://backend:5000
+    depends_on:
+      - backend
+
 volumes:
   postgres_data:
   redis_data:

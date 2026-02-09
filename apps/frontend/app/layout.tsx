@@ -1,33 +1,37 @@
 import type { Metadata, Viewport } from "next";
-import { Libre_Caslon_Text } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
-const libreCaslon = Libre_Caslon_Text({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-  variable: "--font-libre-caslon",
+  variable: "--font-inter",
 });
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Travel with Sulemana - Explore Ghana's Treasures",
-    template: "%s | Travel with Sulemana",
+    default: "Campus Ride - Safe Campus Transport",
+    template: "%s | Campus Ride",
   },
-  description: "Discover Ghana's hidden treasures with expert guides. From wildlife safaris to historic sites, experience authentic travel adventures.",
+  description: "Campus ride-hailing: request rides, track live, and pay securely within your campus community.",
   keywords: [
-    "Ghana travel",
-    "Ghana tourism",
-    "Ghana tours",
-    "West Africa travel",
-    "Ghana safari",
-    "Ghana destinations",
-    "travel guide Ghana",
-    "Ghana adventures",
+    "delivery",
+    "errands",
+    "Ghana",
+    "trusted delivery",
+    "courier",
+    "errand runner",
+    "escrow",
+    "parcel",
   ],
   alternates: {
     canonical: "/",
@@ -35,30 +39,30 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Travel with Sulemana - Explore Ghana's Treasures",
+    title: "Campus Ride - Safe Campus Transport",
     description:
-      "Discover Ghana's hidden treasures with personalized itineraries and expert local guides",
-    siteName: "Travel with Sulemana",
+      "Ride-hailing built for campuses: safety, affordability, transparency",
+    siteName: "Campus Ride",
     images: [
       {
         url:
-          "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Travel with Sulemana",
+        alt: "Campus Ride",
       },
     ],
     locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@travelwithsulemana",
-    creator: "@travelwithsulemana",
-    title: "Travel with Sulemana - Explore Ghana's Treasures",
+    site: "@campusride",
+    creator: "@campusride",
+    title: "Campus Ride - Safe Campus Transport",
     description:
-      "Discover Ghana's hidden treasures with personalized itineraries and expert local guides",
+      "Ride-hailing built for campuses: safety, affordability, transparency",
     images: [
-      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
     ],
   },
   icons: {
@@ -85,21 +89,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={libreCaslon.variable}
-    >
-      <head>
-        {/* Favicons and manifest */}
-        <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-        {/* Next.js will also inject its own metadata here */}
-      </head>
-      <body className="font-sans" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
+      <body 
+        className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
