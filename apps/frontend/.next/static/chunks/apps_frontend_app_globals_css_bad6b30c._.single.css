@@ -517,6 +517,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 2rem;
 }
 
+.top-\[70\%\] {
+  top: 70%;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -2980,6 +2984,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .md\:left-16 {
     left: 4rem;
+  }
+
+  .md\:top-1\/2 {
+    top: 50%;
   }
 
   .md\:mx-6 {

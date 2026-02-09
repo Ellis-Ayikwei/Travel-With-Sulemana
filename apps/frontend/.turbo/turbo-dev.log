@@ -25,3 +25,5 @@
  GET /assets/images/logo-light-mode.png [33m404[39m in 150ms
  [31m[1m⨯[22m[39m The requested resource isn't a valid image for /assets/images/logo-light-mode.png received [1mnull[22m
  GET / [32m200[39m in 174ms
+ GET / [32m200[39m in 423ms
+ [32m[1m✓[22m[39m Compiled in 85ms
