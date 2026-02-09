@@ -4,15 +4,7 @@
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],
-    "[project]/apps/frontend/app/blog/page": [
-      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
-      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
-    ],
-    "[project]/apps/frontend/app/book/[id]/page": [
-      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
-      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
-    ],
-    "[project]/apps/frontend/app/book/page": [
+    "[project]/apps/frontend/app/destinations/[slug]/page": [
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],
@@ -20,15 +12,7 @@
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ],
-    "[project]/apps/frontend/app/experiences/page": [
-      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
-      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
-    ],
     "[project]/apps/frontend/app/page": [
-      "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
-      "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
-    ],
-    "[project]/apps/frontend/app/watch/page": [
       "static/media/37afeb4e0885cb1d-s.p.23789343.woff2",
       "static/media/efd23c95a9595abc-s.p.75509b57.woff2"
     ]

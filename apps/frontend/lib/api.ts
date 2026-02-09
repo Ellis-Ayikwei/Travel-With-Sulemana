@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
 // API URL for direct fetch calls (not using axios interceptors)
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002";
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001";
 
 // Force relative path for Next.js API routes - ignore any env variables
 // This ensures we always use the Next.js API routes, not external backends

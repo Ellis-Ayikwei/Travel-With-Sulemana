@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { API_URL } from "@/lib/api";
 
 interface Destination {
   _id: string;
@@ -55,6 +54,158 @@ interface Experience {
   duration?: string;
 }
 
+// Static destinations data
+const destinationsData: Destination[] = [
+  {
+    _id: "mole",
+    slug: "mole-national-park",
+    name: "Mole National Park",
+    region: "Northern",
+    tagline: "Ghana's Premier Wildlife Safari Destination",
+    description: "Experience the thrill of encountering elephants, antelopes, and over 300 bird species in their natural habitat.",
+    longDescription: "Mole National Park is Ghana's largest wildlife sanctuary, spanning 4,840 square kilometers of pristine Guinea savannah. Established in 1971, it's West Africa's premier destination for wildlife viewing. The park is home to over 90 mammal species including elephants, buffalo, baboons, warthogs, and various antelope species. With over 300 bird species recorded, it's also a paradise for bird watchers.",
+    image: "/assets/images/mole.jpg",
+    gallery: ["/assets/images/mole.jpg", "/assets/images/mole-2.jpg"],
+    highlights: ["Elephant Safari", "Bird Watching", "Canopy Walkways", "Museum Experience"],
+    duration: "2-3 days",
+    bestTime: "November to April (dry season)",
+    thingsToDo: [
+      "Morning and evening game drives to spot elephants, antelopes, and other wildlife",
+      "Guided walking safaris for close encounters with nature",
+      "Bird watching - over 300 species recorded",
+      "Visit the observation platform overlooking the watering hole",
+      "Cultural visits to nearby Larabanga village"
+    ],
+    howToGetThere: "Located 150km west of Tamale. Accessible by road from Tamale (3-4 hours drive), Kumasi (6-7 hours), or Accra (10-12 hours). Regular buses and taxis available from Tamale.",
+    whereToStay: [
+      "Mole Motel - The only accommodation inside the park with restaurant and pool",
+      "Zaina Lodge - Luxury eco-lodge just outside the park",
+      "Budget guesthouses in nearby Larabanga village"
+    ],
+    localTips: [
+      "Book accommodation in advance, especially during peak season",
+      "Bring binoculars for wildlife viewing",
+      "Wear neutral-colored clothing for game drives",
+      "Visit the ancient Larabanga Mosque nearby",
+      "Early mornings and late afternoons are best for wildlife spotting"
+    ],
+    estimatedCost: "$50-150 per day including accommodation and activities",
+    rating: 4.7,
+    reviews: 342
+  },
+  {
+    _id: "larabanga",
+    slug: "larabanga-mosque",
+    name: "Larabanga Mosque",
+    region: "Northern",
+    tagline: "West Africa's Oldest Mosque",
+    description: "Step back in time at this stunning 15th-century mosque, built in the traditional Sudanese architectural style.",
+    longDescription: "The Larabanga Mosque is one of the oldest mosques in West Africa, dating back to 1421. Built in the traditional Sudanese-Sahelian architectural style, this unique structure stands as a testament to Ghana's Islamic heritage. The mosque features distinctive wooden beams protruding from its mud walls and has been carefully maintained using traditional building techniques for over 600 years.",
+    image: "/assets/images/larabanga.jpg",
+    gallery: ["/assets/images/larabanga.jpg"],
+    highlights: ["Ancient Architecture", "Sacred Mystic Stone", "Local Guide", "Cultural Heritage"],
+    duration: "Half day",
+    bestTime: "Year-round",
+    thingsToDo: [
+      "Guided tour of the mosque and its history",
+      "Learn about traditional Sudanese architecture",
+      "Visit the sacred mystic stone",
+      "Explore Larabanga village",
+      "Combine with visit to nearby Mole National Park"
+    ],
+    howToGetThere: "Located 5km from Mole National Park entrance. Easily accessible from Tamale or as part of a Mole safari trip.",
+    whereToStay: [
+      "Mole Motel (15km away)",
+      "Guesthouses in Larabanga village",
+      "Day trip from Tamale"
+    ],
+    localTips: [
+      "Dress modestly out of respect for the Islamic site",
+      "Photography fee required - ask permission before taking photos",
+      "Hire a local guide for detailed history and stories",
+      "Combine with Mole National Park visit (only 5km away)",
+      "Best visited in the morning or late afternoon"
+    ],
+    estimatedCost: "$10-20 for tour and donations",
+    rating: 4.5,
+    reviews: 156
+  },
+  {
+    _id: "salaga",
+    slug: "salaga-slave-wells",
+    name: "Salaga Slave Wells",
+    region: "Northern",
+    tagline: "A Journey Through History",
+    description: "Discover the poignant history of the trans-Saharan slave trade at these historic wells.",
+    longDescription: "Salaga was once a major hub of the trans-Saharan slave trade. The slave wells and shrines here tell the powerful and heartbreaking story of thousands of people who passed through this town. These historic sites serve as an important reminder of Ghana's past and the resilience of its people.",
+    image: "/assets/images/salaga.jpg",
+    gallery: ["/assets/images/salaga.jpg"],
+    highlights: ["Historical Tours", "Cultural Education", "Heritage Sites", "Local Stories"],
+    duration: "1 day",
+    bestTime: "Year-round",
+    thingsToDo: [
+      "Visit the ancient slave wells",
+      "Tour the slave market site",
+      "Learn about the trans-Saharan slave trade",
+      "Visit the protection shrine",
+      "Cultural walks through historic Salaga"
+    ],
+    howToGetThere: "Located in Salaga town, accessible from Tamale (100km) or Kumasi (220km) by road.",
+    whereToStay: [
+      "Basic guesthouses in Salaga",
+      "Hotels in Tamale (100km away)",
+      "Day trip option from Tamale"
+    ],
+    localTips: [
+      "Hire a knowledgeable local guide for full historical context",
+      "The tours can be emotionally heavy - prepare yourself",
+      "Support local by buying crafts from artisans",
+      "Combine with visit to other Northern sites",
+      "Bring water and sun protection"
+    ],
+    estimatedCost: "$20-40 for guides and entrance fees",
+    rating: 4.3,
+    reviews: 98
+  },
+  {
+    _id: "cape-coast",
+    slug: "cape-coast-castle",
+    name: "Cape Coast Castle",
+    region: "Southern",
+    tagline: "Where History Echoes",
+    description: "Walk through the powerful corridors of Cape Coast Castle, a UNESCO World Heritage Site.",
+    longDescription: "Cape Coast Castle stands as one of the most significant historical sites in Ghana. Built by the Swedes in 1653 and later expanded by the British, this UNESCO World Heritage Site was a major hub of the transatlantic slave trade. The haunting 'Door of No Return' and the dungeons below tell a powerful story of resilience and remembrance. Today, it serves as a museum and memorial to those who suffered through this dark chapter of history.",
+    image: "/assets/images/capecoast.webp",
+    gallery: ["/assets/images/capecoast.webp"],
+    highlights: ["Historical Tours", "Ocean Views", "Museum Exhibits", "UNESCO Site"],
+    duration: "1 day",
+    bestTime: "Year-round",
+    thingsToDo: [
+      "Guided tour through the castle and dungeons",
+      "Visit the 'Door of No Return'",
+      "Explore the museum exhibits",
+      "Learn about the transatlantic slave trade",
+      "Enjoy panoramic ocean views from the ramparts"
+    ],
+    howToGetThere: "Located in Cape Coast town, 150km west of Accra (2-3 hours by road). Regular buses and shared taxis available.",
+    whereToStay: [
+      "Hotels and guesthouses in Cape Coast town",
+      "Beachfront resorts along the coast",
+      "Day trip from Accra possible"
+    ],
+    localTips: [
+      "Guided tours highly recommended for full context",
+      "The experience can be emotionally intense",
+      "Combine with visit to Elmina  Castle nearby",
+      "Kakum National Park canopy walk is 30 minutes away",
+      "Best to visit early morning to avoid crowds"
+    ],
+    estimatedCost: "$30-60 for entrance and guide",
+    rating: 4.9,
+    reviews: 1253
+  }
+];
+
 export default function DestinationDetailPage() {
   const params = useParams();
   const slug = params?.slug as string;
@@ -70,42 +221,14 @@ export default function DestinationDetailPage() {
     }
   }, [slug]);
 
-  const fetchDestination = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch(`${API_URL}/api/destinations?slug=${slug}`);
-      const data = await response.json();
-      
-      if (Array.isArray(data) && data.length > 0) {
-        const dest = data[0];
-        setDestination(dest);
-        
-        // Fetch related experiences if experienceIds exist
-        if (dest.experienceIds && dest.experienceIds.length > 0) {
-          fetchExperiences(dest.experienceIds);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to fetch destination:", error);
-    } finally {
-      setLoading(false);
+  const fetchDestination = () => {
+    setLoading(true);
+    // Find destination from static data
+    const found = destinationsData.find(d => d.slug === slug);
+    if (found) {
+      setDestination(found);
     }
-  };
-
-  const fetchExperiences = async (experienceIds: string[]) => {
-    try {
-      const response = await fetch(`${API_URL}/api/experiences`);
-      const data = await response.json();
-      
-      if (Array.isArray(data)) {
-        const filtered = data.filter((exp: Experience) => 
-          experienceIds.includes(exp._id)
-        );
-        setExperiences(filtered);
-      }
-    } catch (error) {
-      console.error("Failed to fetch experiences:", error);
-    }
+    setLoading(false);
   };
 
   if (loading) {
